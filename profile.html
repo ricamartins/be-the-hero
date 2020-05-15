@@ -79,5 +79,17 @@
         </header>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function myFunction(x) {
+                if (x.matches) { // If media query matches
+                    window.location.replace("./notifications.html");
+                } else {
+                    // faz outra
+                }
+                }
+
+                var x = window.matchMedia("(max-width: 700px)")
+                x.addListener(myFunction) 
+        </script>
     </body>
 </html>
