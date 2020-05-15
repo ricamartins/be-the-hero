@@ -1,13 +1,17 @@
+body{
+    background-color: rgb(238, 238, 238);
+}
+
 .menu1{
-    background-color: #ffe989;
-    height:70px;
+    background-color: rgb(255, 222, 74);
+    height:90px;
     display: flex;
     align-items: center;
 }
 
 .menu2{
-    background-color: #ffe989;
-    height: 70px;
+    background-color: rgb(255, 222, 74);
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -26,20 +30,30 @@ svg{
     width: 30px;
 }
 
-.o-titulo strong{
-    color: #00597a;
-    font-size: 2em;
+.menu1 .nav-item .dropdown-menu{
+    width: 600px;
+}
+
+.o-titulo img{
 }
 
 a:hover{
     text-decoration: none;
 }
 
+a:focus{
+    text-decoration: none;
+}
 
-.dropdown {
+
+.menu2 .dropdown {
     display:inline-block;
     margin-left:20px;
     padding:10px;
+}
+
+.dropdown-item{
+    color: #00597a;
 }
 
 
@@ -64,12 +78,16 @@ a:hover{
   
    
 .notification-heading, .notification-footer  {
-    padding:2px 10px;
+    padding:0px 10px;
 }  
       
         
-.dropdown-menu.divider {
+.menu2 .dropdown-menu.divider {
     margin:5px 0;          
+}
+
+.menu2 .dropdown-item:focus{
+    background-color: #00597a;
 }
 
 .item-title { 
