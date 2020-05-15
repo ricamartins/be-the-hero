@@ -18,11 +18,7 @@ body{
 }
 
 #dLabel{
-    margin-right: 10px;
-}
-
-.perfil{
-    margin-right: 10%;
+    
 }
 
 svg{
@@ -34,8 +30,6 @@ svg{
     width: 600px;
 }
 
-.o-titulo img{
-}
 
 a:hover{
     text-decoration: none;
@@ -53,22 +47,27 @@ a:focus{
 }
 
 .dropdown-item{
+    font-size: 1.5em;
     color: #00597a;
+}
+
+.dropdown-menu{
+    display: none;
 }
 
 
 .notifications {
-    min-width:420px; 
+    min-width:520px; 
 }
   
 .notifications-wrapper {
     overflow:auto;
-    max-height:250px;
+    max-height:350px;
 }
     
 .menu-title {
     color:#00597a;
-    font-size:1.5rem;
+    font-size:2rem;
     display:inline-block;
 }
  
@@ -91,7 +90,7 @@ a:focus{
 }
 
 .item-title { 
-    font-size:1.3rem;
+    font-size:2rem;
     color:#000;
     
 }
@@ -104,7 +103,40 @@ a:focus{
 }
 
 p{
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
+main .row{
+    margin: 0 20%;
+}
+
+@media (max-width: 1300px){
+    main .row{
+        margin: 0;
+    }
+}
+
+@media (max-width: 700px){
+
+
+    .dropdown .notifications{
+        display: none;
+    }
+
+    .row .col-12, .col-12 .notifications{
+        margin:0;
+        padding: 0;
+    }
+
+    .col-12 .notifications{
+        padding-left: 0;
+        left:0;
+        min-width: 100%;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+}
 
