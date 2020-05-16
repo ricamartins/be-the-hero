@@ -4,14 +4,25 @@ body{
 
 
 .menu1, .menu2{
+    z-index: 5;
+    position: fixed;
     background-color: rgb(255, 222, 74);
     height:90px;
     display: flex;
     align-items: center;
 }
 
+.menu1{
+    left:0;
+}
+
 .menu2{
+    right: 0;
     justify-content: flex-end;
+}
+
+.container{
+    margin-top: 90px;
 }
 
 .o-titulo img{
