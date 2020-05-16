@@ -5,7 +5,7 @@
 }
 .vertical-scroll {
     overflow-y: auto;
-    height: 65vh;
+    height: 60vh;
 }
 select#categorias {
     font-size: 1em;
