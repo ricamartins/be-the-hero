@@ -1,0 +1,300 @@
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+
+.menu1, .menu2{
+    background-color: rgb(255, 222, 74);
+    height:90px;
+    display: flex;
+    align-items: center;
+}
+
+.menu2{
+    justify-content: flex-end;
+}
+
+.o-titulo img{
+    width: 200px;
+}
+
+
+svg{
+    fill: #00597a;
+    width: 30px;
+}
+
+.menu1 .nav-item .dropdown-menu{
+    width: 600px;
+}
+
+
+a:hover, a:focus{
+    text-decoration: none;
+}
+
+.menu2 .dropdown {
+    display:inline-block;
+    margin-left:20px;
+    padding:10px;
+}
+
+.dropdown-item{
+    font-size: 1.5em;
+    color: #00597a;
+}
+
+.dropdown-menu{
+    display: none;
+}
+
+
+.notifications-wrapper {
+    overflow:auto;
+    max-height:100%;
+}
+    
+.content .notification-item{
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.notifications-profile img{
+    border-radius: 50px;
+    width: 90px;
+}
+
+.notifications-profile{
+    margin-right: 10px;
+}
+
+.menu-title {
+    color:#00597a;
+    font-size:2rem;
+    display:inline-block;
+}
+ 
+.glyphicon-circle-arrow-right {
+    margin-left:10px;     
+}
+     
+.notification-heading, .notification-footer  {
+    padding:0px 10px;
+}  
+      
+        
+.menu2 .divider {
+    border-top: 1px solid #00597a34;
+    margin:5px 0;          
+}
+
+.menu2 .dropdown-item:focus{
+    background-color: #00597a;
+}
+
+.item-title { 
+    font-size:1.5rem;
+    color:#000;
+    
+}
+ 
+.notification-item {
+    padding:10px;
+    margin:5px;
+    background:#cfd7da86;
+    border-radius:4px;
+}
+
+p{
+    font-size: 0.6em;
+}
+
+main .row{
+    margin: 0 20%;
+}
+
+.sidepanel {
+    height: 100%; 
+    width: 0; /* change this with JavaScript */
+    position: fixed; 
+    z-index: 1; 
+    top: 90px;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    padding-top: 10px; 
+  }
+
+.panel-left{
+    left:0;
+}
+
+.panel-right, .panel-notif{
+    right: 0;
+}
+
+#image-perfil, #botao-perfil, #nome-perfil{
+    display: flex;
+    justify-content: center;
+}
+
+#botao-perfil button{
+    background-color: #00597a;
+    color: white;
+    margin: 10px 0;
+}
+
+#image-perfil svg{
+    width: 80px;
+    margin: 10px 0;
+}
+  
+.sidepanel a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #00597a;
+    display: block;
+    transition: 0.3s;
+}
+
+h4{
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+.sidepanel a:hover {
+    color: #00597aa2;
+}
+  
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 222, 74);
+    color: #00597a;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:focus, .openbtn:active{
+    outline: none;
+}
+
+
+@media (max-width: 1300px){
+    main .row{
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 665px){
+
+
+    .dropdown .notifications{
+        display: none;
+    }
+
+    .row .col-12, .col-12 .notifications{
+        margin:0;
+        padding: 0;
+    }
+
+    .col-12 .notifications{
+        padding-left: 0;
+        left:0;
+        min-width: 100%;
+    }
+
+    .notifications-profile img{
+        border-radius: 50px;
+        width: 70px;
+    }
+
+    #image-perfil, #botao-perfil, #nome-perfil{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nome-perfil{
+        font-size: 1.5em;
+    }
+    
+    #botao-perfil button{
+        background-color: #00597a;
+        color: white;
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+    
+    #image-perfil svg{
+        width: 150px;
+        margin: 10px 0;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    .o-titulo img{
+        width: 140px;
+        margin-right: 10px;
+    }
+
+    .menu2 .dropdown {
+        display:inline-block;
+        margin-left:2px;
+        padding:2px;
+    }
+}
+
+
+@media (min-width: 465px){
+
+    .sidepanel {
+        border-radius: 5px;
+        width: 0;
+        position: fixed; 
+        z-index: 1; 
+        background-color: whitesmoke;
+        overflow-x: hidden; 
+        padding-top: 10px; 
+      }
+
+    .panel-notif{
+        height: 420px;
+        top: 70px;
+        right: 85px;
+    }
+    
+    .panel-right{
+        height:320px;
+        top: 70px;
+        right: 10px;
+    }
+
+    .panel-left{
+        height: 190px; 
+        top: 65px;
+        left:225px;
+    }
+
+    .notifications-wrapper {
+        max-height:350px;
+    }
+
+}
