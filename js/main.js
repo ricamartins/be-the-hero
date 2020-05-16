@@ -2,13 +2,8 @@
 
     var x = window.matchMedia("(max-width: 665px)");
     var y = window.matchMedia("(max-width: 465px)");
+    var z = window.matchMedia("(max-height: 420px)");
 
-    $('#dLabel').click(function(){
-        if (x.matches) {
-            window.location.replace("./notifications.html");
-        }
-        else{}
-    })
 
     $(document).on('click', function(e) {
         var dentroMenu = e.target.closest('#mySidepanel');
@@ -51,7 +46,19 @@
                 }
             }
         }
-        else{
+        if (z.matches) {
+            console.log("z matches")
+            if(Menu || Menu2 || Notif){
+                if (document.getElementById(id).style.width == "100%"){
+                    document.getElementById(id).style.width = "0";
+                }
+                else{
+                    document.getElementById(id).style.width = "100%";
+                }
+            }
+        }
+        if(!z.matches && !y.matches){
+            console.log("aqui match ):")
             if(Menu || Menu2){
                 if (document.getElementById(id).style.width == "240px"){
                     document.getElementById(id).style.width = "0";
