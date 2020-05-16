@@ -1,37 +1,59 @@
 @charset "UTF-8";
 
-body {
-    /* color: rgb(255, 230, 129);
-    color: rgb(0, 88, 124);
-    color: rgb(252, 101, 82);
-    color: rgb(90, 183, 128);
-    color: rgb(217, 216, 218); */
-
-    background-color: hsl(145, 39%, 85%);
-    color: rgb(0, 88, 124);
+.main {
+    background-color: rgb(255, 222, 74);
 }
-
 .vertical-scroll {
     overflow-y: auto;
-    height: 70vh;
+    height: 65vh;
+}
+select#categorias {
+    font-size: 1em;
+    background-color: #d3dbde;
+    border: 2px solid #00597a;
+    color: #00597a;
+}
+
+label.btn {
+    border: 2px solid #00597a;
+    outline: none;
+}
+label.active {
+    background-color: #00597a;
+    outline: none;
+}
+label.focus {
+    outline: 2px solid rgb(255, 222, 74);
+}
+.btn-group {
+    z-index: 0;
+}
+.btn-svg {
+    width: 2em;
+    height: 2em;
+    fill: #00597a;
+    stroke: #00597a;
+    stroke-width: 4px;
+}
+label.active .btn-svg {
+    fill: rgb(255, 222, 74);
+}
+
+
+section {
+    background-color: #d3dbde;
 }
 article {
     flex: none;
     width: 250px;
     height: 370px;
     cursor: pointer;
-    background-color: rgb(252, 101, 82);
 }
 article img {
     width: 200px;
     height: 200px;
 }
 
-.btn-outline-info {
-    border-color: rgb(0, 88, 124);
-    color: rgb(0, 88, 124);
-}
-.btn-outline-info:focus {
-    background-color: rgb(0, 88, 124);
-    color: rgb(255, 230, 129);
+article a, p, button {
+    font-size: 1.1em;
 }
