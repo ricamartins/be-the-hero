@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
-.main {
-    background-color: rgb(255, 222, 74);
-}
-.vertical-scroll {
-    overflow-y: auto;
-    height: 65vh;
+main {
+    background-color: rgb(255, 222, 74) !important;
 }
 select#categorias {
     font-size: 1em;
@@ -36,24 +32,86 @@ label.focus {
     stroke-width: 4px;
 }
 label.active .btn-svg {
-    fill: rgb(255, 222, 74);
+    fill: #ffde4a;
 }
 
 
 section {
     background-color: #d3dbde;
+    overflow-y: auto;
+    height: 65vh;
 }
 article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex: none;
-    width: 250px;
+    width: 230px;
     height: 370px;
+    margin: 0.75em 0.5em;
+    border-radius: 0.5em;
     cursor: pointer;
+    background-color: #F5F0F6;
+}
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px hsla(0, 0%, 0%, 5%);
 }
 article img {
     width: 200px;
     height: 200px;
+    margin: 0.5em;
 }
-
+article .content {
+    width: 230px;
+    height: 150px;
+    margin: 0.75em 0;
+}
+article .content-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+article .content-body {
+    display: flex;
+    padding: 1em;
+    padding-top: 0;
+}
 article a, p, button {
     font-size: 1.1em;
+}
+article a {
+    /* padding-left: 0.5em; */
+    font-weight: 600;
+    color: #00597a;
+}
+article a:hover {
+    color: #881600;
+}
+article button {
+    padding: 0 !important;
+}
+article button svg {
+    fill: #00597a;
+}
+article button svg:hover {
+    fill: #881600;
+}
+
+
+@media only screen and (max-height: 425px) and (orientation: landscape) {
+    section {
+        height: 45vh;
+    }
+    article {
+        display: flex;
+        width: 450px;
+        height: 160px;
+        /* 215px inicialmente */
+    }
+
+    article img {
+        width: 140px;
+        height: 140px;
+    }
 }
