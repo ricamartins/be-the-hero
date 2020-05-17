@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
-.main {
-    background-color: rgb(255, 222, 74);
-}
-.vertical-scroll {
-    overflow-y: auto;
-    height: 60vh;
+main {
+    background-color: rgb(255, 222, 74) !important;
 }
 select#categorias {
     font-size: 1em;
@@ -42,6 +38,8 @@ label.active .btn-svg {
 
 section {
     background-color: #d3dbde;
+    overflow-y: auto;
+    height: 60vh;
 }
 article {
     flex: none;
@@ -57,3 +55,17 @@ article img {
 article a, p, button {
     font-size: 1.1em;
 }
+
+/* @media (orientation: landscape) {
+    article {
+        display: flex;
+        width: 370px;
+        height: 250px;
+    }
+    article img {
+        margin: 0;
+    }
+    .vertical-scroll {
+        height: 40vh;
+    }
+} */
