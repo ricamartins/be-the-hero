@@ -4,14 +4,25 @@ body{
 
 
 .menu1, .menu2{
+    z-index: 5;
+    position: fixed;
     background-color: rgb(255, 222, 74);
     height:90px;
     display: flex;
     align-items: center;
 }
 
+.menu1{
+    left:0;
+}
+
 .menu2{
+    right: 0;
     justify-content: flex-end;
+}
+
+.container{
+    margin-top: 90px;
 }
 
 .o-titulo img{
@@ -108,7 +119,7 @@ a:hover, a:focus{
     border-radius:4px;
 }
 
-p{
+.notification-item p{
     font-size: 0.6em;
 }
 
@@ -154,10 +165,16 @@ main .row{
 .sidepanel a {
     padding: 8px 8px 8px 8px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #00597a;
     display: block;
     transition: 0.3s;
+}
+
+#menu{
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: bolder;
 }
 
 h4{
@@ -201,10 +218,7 @@ h4{
     }
 }
 
-
-@media (max-width: 665px){
-
-
+@media (max-width: 465px), (max-height:420px){
     .dropdown .notifications{
         display: none;
     }
@@ -225,10 +239,13 @@ h4{
         width: 70px;
     }
 
-    #image-perfil, #botao-perfil, #nome-perfil{
-        display: flex;
-        justify-content: center;
+    .menu2 .dropdown {
+        display:inline-block;
+        margin-left:2px;
+        padding:2px;
     }
+}
+@media (max-width: 465px){
 
     #nome-perfil{
         font-size: 1.5em;
@@ -246,24 +263,16 @@ h4{
         margin: 10px 0;
     }
 
-}
-
-@media (max-width: 400px){
-
     .o-titulo img{
         width: 140px;
-        margin-right: 10px;
+        margin-right: 0px;
     }
 
-    .menu2 .dropdown {
-        display:inline-block;
-        margin-left:2px;
-        padding:2px;
-    }
 }
 
 
-@media (min-width: 465px){
+
+@media (min-width: 465px) and (min-height:420px){
 
     .sidepanel {
         border-radius: 5px;
@@ -282,19 +291,35 @@ h4{
     }
     
     .panel-right{
-        height:320px;
+        height:270px;
         top: 70px;
         right: 10px;
     }
 
+    #menu{
+        font-size: 15px;
+    }
+
     .panel-left{
-        height: 190px; 
+        height: 180px; 
         top: 65px;
         left:225px;
     }
 
     .notifications-wrapper {
         max-height:350px;
+    }
+}
+
+@media (max-height: 380px){
+    #menu{
+        font-size: 15px;
+    }
+    #nome-perfil{
+        font-size: 0.8em;
+    }
+    #image-perfil svg{
+        width: 50px;
     }
 
 }
