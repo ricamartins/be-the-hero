@@ -698,34 +698,6 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
-    <script>
-        let firstSearchRadios = document.getElementsByName('first-search');
-        for(let i = 0; i < firstSearchRadios.length; i++) {
-
-            firstSearchRadios[i].addEventListener('change', function () {
-                for(let j = 0; j < firstSearchRadios.length; j++) {
-                    firstSearchRadios[j].parentElement.classList.remove('active');
-                    if (firstSearchRadios[j].checked) {
-                        firstSearchRadios[j].parentElement.classList.add('active');
-                        console.log(firstSearchRadios[j].value);
-                    }
-                }
-            });
-        }
-        let secondSearchRadios = document.getElementsByName('second-search');
-        for(let i = 0; i < secondSearchRadios.length; i++) {
-
-            secondSearchRadios[i].addEventListener('change', function () {
-                for(let j = 0; j < secondSearchRadios.length; j++) {
-                    secondSearchRadios[j].parentElement.classList.remove('active');
-                    if (secondSearchRadios[j].checked) {
-                        secondSearchRadios[j].parentElement.classList.add('active');
-                        console.log(secondSearchRadios[j].value);
-                    }
-                }
-            });
-        }
-    </script>
+    <script src="./js/home.js"></script>
 </body>
-
 </html>
