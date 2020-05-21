@@ -25,14 +25,36 @@ for(let i = 0; i < secondSearchRadios.length; i++) {
     });
 }
 
+// MEDIA QUERY PARA CELULARES EM LANDSCAPE
+const mobileLandscape = window.matchMedia('(max-height: 425px) and (orientation: landscape)');
+
 // TOGGLE PARA A BARRA DE CATEGORIAS
 let categoriesToggle = document.getElementById('categories-toggle');
 categoriesToggle.addEventListener('click', function () {
     let categories = document.getElementById('categories');
-    if (categories.style.display == 'flex') {
-        categories.style.display = 'none';
+    let btnToolbar = document.getElementById('btn-toolbar');
+
+    if (mobileLandscape.matches) {
+        // FECHA A BARRA DE OPÇÕES DE PESQUISA SE ESTIVER ABERTA
+        if (btnToolbar.style.display = 'flex') {
+            btnToolbar.style.display = 'none';
+        }
+
+        // TOGGLE BARRA DE CATEGORIA
+        if (categories.style.display == 'flex') {
+            categories.style.display = 'none';
+        } else {
+            categories.style.display = 'flex';
+        }
+
+    // SE NÃO ESTIVER EM LANDSCAPE PERMITE DUAS BARRAS ABERTAS
     } else {
-        categories.style.display = 'flex';
+        // TOGGLE BARRA DE CATEGORIA
+        if (categories.style.display == 'flex') {
+            categories.style.display = 'none';
+        } else {
+            categories.style.display = 'flex';
+        }
     }
 });
 
@@ -40,9 +62,28 @@ categoriesToggle.addEventListener('click', function () {
 let btnToolbarToggle = document.getElementById('btn-toolbar-toggle');
 btnToolbarToggle.addEventListener('click', function () {
     let btnToolbar = document.getElementById('btn-toolbar');
-    if (btnToolbar.style.display == 'flex') {
-        btnToolbar.style.display = 'none';
+    let categories = document.getElementById('categories');
+
+    if (mobileLandscape.matches) {
+        // FECHA A BARRA DE CATEGORIA SE ESTIVER ABERTA
+        if (categories.style.display == 'flex') {
+            categories.style.display = 'none';
+        }
+
+        // TOGGLE BARRA DE OPÇÕES DE PESQUISA
+        if (btnToolbar.style.display == 'flex') {
+            btnToolbar.style.display = 'none';
+        } else {
+            btnToolbar.style.display = 'flex';
+        }
+
+    // SE NÃO ESTIVER EM LANDSCAPE PERMITE DUAS BARRAS ABERTAS
     } else {
-        btnToolbar.style.display = 'flex';
+        // TOGGLE BARRA DE OPÇÕES DE PESQUISA
+        if (btnToolbar.style.display == 'flex') {
+            btnToolbar.style.display = 'none';
+        } else {
+            btnToolbar.style.display = 'flex';
+        }
     }
 });
