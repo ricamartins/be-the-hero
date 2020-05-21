@@ -47,7 +47,6 @@
             }
         }
         if (z.matches) {
-            console.log("z matches")
             if(Menu || Menu2 || Notif){
                 if (document.getElementById(id).style.width == "100%"){
                     document.getElementById(id).style.width = "0";
@@ -58,7 +57,6 @@
             }
         }
         if(!z.matches && !y.matches){
-            console.log("aqui match ):")
             if(Menu || Menu2){
                 if (document.getElementById(id).style.width == "240px"){
                     document.getElementById(id).style.width = "0";
