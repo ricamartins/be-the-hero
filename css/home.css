@@ -9,14 +9,14 @@ main {
 /* TOOLBAR */
 .toolbar {
     width: 100vw;
+    height: 50px;
     background-color: rgb(255, 222, 74);
     position: fixed;
-    /* top: 90px; */
     bottom: 0;
     z-index: 2;
     display: grid;
-    grid: "categories search-box searches-toolbar" 50px
-        /  15%       70%         15%;
+    grid: "categories  search-box searches-toolbar" 50px
+        /  55px        auto       55px;
     align-items: start;
 }
 
@@ -71,6 +71,7 @@ ul#categories button span {
     padding: 0.25em;
     border: 1px solid #00597a;
     border-radius: 0.25em;
+    font-size: 1.25em;
 }
 
 /* BOTÕES DE PESQUISA */
@@ -124,8 +125,12 @@ label.active .btn-svg {
 /* SEÇÃO DOS CARDS */
 section {
     grid-area: section;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 50px;
+    padding: 2em 1em;
+    justify-content: center;
 }
 article {
     display: flex;
@@ -134,7 +139,7 @@ article {
     flex: none;
     width: 230px;
     height: 370px;
-    margin: 0.75em 0.5em;
+    margin: 1em 2em;
     border-radius: 0.5em;
     cursor: pointer;
     background-color: hsl(270, 25%, 85%);
@@ -203,7 +208,7 @@ article button svg:hover {
         flex-direction: row;
         height: fit-content;
         bottom: 87px;
-        right: 280px;
+        right: 330px;
     }
     div#first-search {
         flex-direction: row;
@@ -224,9 +229,7 @@ article button svg:hover {
         display: flex;
         width: 450px;
         height: 160px;
-        /* 215px inicialmente */
     }
-
     article img {
         width: 140px;
         height: 140px;
@@ -234,3 +237,101 @@ article button svg:hover {
 }
 
 /* DESKTOP */
+@media only screen and (min-width: 992px) {
+    .toolbar {
+        width: 90vw;
+        top: 110px;
+        left: 50px;
+        grid: "categories  search-box searches-toolbar" 50px
+            /  5px        20%       auto;
+        align-items: center;
+        border-radius: 0.5em;
+    }
+
+    /* BOTÕES DE CATEGORIA */
+
+    button#categories-toggle {
+        display: none;
+    }
+    nav.categories {
+        align-self: flex-start;
+    }
+    ul#categories {
+        display: flex !important;
+        top: 70px;
+        border-radius: 0.5em;
+    }
+    ul#categories li {
+        background-color: rgb(255, 222, 74);
+        padding: 0.2em 0.5em;
+        border-radius: 0.5em;
+    }
+    ul#categories li:hover button {
+        background-color: #00597a;
+    }
+    ul#categories button span {
+        display: inline-flex;
+        padding-left: 1em;
+        font-weight: 600;
+        color: #00597a;
+    }
+    ul#categories button:focus span {
+        color: #ffde4a;
+    }
+    ul#categories li:focus, li:hover span {
+        color: #ffde4a !important;
+    }
+    ul#categories li:focus, li:hover svg {
+        fill: #ffde4a;
+    }
+    /* CAIXA DE PESQUISA */
+    .search-box input {
+        z-index: 3;
+        width: 100%;
+    }
+
+    /* BOTÕES DE PESQUISA */
+    button#btn-toolbar-toggle {
+        display: none;
+    }
+    .searches-toolbar {
+        grid-area: searches-toolbar;
+        position: relative;
+        width: 100%;
+        vertical-align: bottom;
+    }
+    div#btn-toolbar{
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        margin: auto;
+    }
+    div#first-search {
+        flex-direction: row;
+        margin: 0;
+        margin-left: 0;
+        margin-right: 4em;
+    }
+    div#second-search {
+        flex-direction: row;
+        margin: 0;
+        margin-left: 4em;
+        margin-right: 0;
+    }
+    label.btn {
+        margin: 0;
+    }
+
+    /* SEÇÃO DOS CARDS */
+    section {
+        grid-area: section;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+        margin-top: 70px;
+        margin-bottom: 50px;
+        margin-left: 25vw;
+        padding: 2em 1em;
+        justify-content: center;
+    }
+}
