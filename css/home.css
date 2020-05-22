@@ -1,30 +1,117 @@
 @charset "UTF-8";
 
+/* MAIN GRID */
 main {
-    background-color: rgb(255, 222, 74) !important;
-}
-select#categorias {
-    font-size: 1em;
-    background-color: #d3dbde;
-    border: 2px solid #00597a;
-    color: #00597a;
+    margin-top: 90px;
+    /* background-color: rgb(255, 222, 74) !important; */
 }
 
+/* TOOLBAR */
+.toolbar {
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(255, 222, 74);
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    display: grid;
+    grid: "categories  search-box searches-toolbar" 50px
+        /  55px        auto       55px;
+    align-items: start;
+}
+
+/* BOTÕES DE CATEGORIA */
+nav.categories {
+    grid-area: categories;
+    position: relative;
+    width: fit-content;
+    justify-self: left;
+}
+ul#categories {
+    display: none;
+    flex-direction: column;
+    width: fit-content;
+    position: relative;
+    bottom: 550px;
+    z-index: 1;
+    padding: 0;
+    background-color: #ffde4a;
+    list-style-type: none;
+    transition: bottom 0.25s ease-in-out;
+}
+ul#categories li {
+    background-color: rgb(255, 222, 74);
+    padding: 0.45em 0;
+}
+ul#categories button:focus {
+    background-color: #00597a;
+}
+ul#categories button:focus svg {
+    fill: rgb(255, 222, 74);
+}
+ul#categories button span {
+    display: none;
+}
+
+/* CAIXA DE PESQUISA */
+.search-box {
+    grid-area: search-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box button {
+    display: none;
+}
+.search-box input {
+    width: 80%;
+    height: 70%;
+    padding: 0.25em;
+    border: 1px solid #00597a;
+    border-radius: 0.25em;
+    font-size: 1.25em;
+}
+
+/* BOTÕES DE PESQUISA */
+.searches-toolbar {
+    grid-area: searches-toolbar;
+    position: relative;
+    width: 100%;
+    text-align: right;
+}
+div#btn-toolbar{
+    background-color: rgb(255, 222, 74);
+    display: none;
+    flex-direction: column;
+    width: fit-content;
+    position: relative;
+    bottom: 400px;
+    z-index: 1;
+    transition: bottom 1s ease-in-out;
+}
+div#first-search {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1em;
+}
+div#second-search {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0 0;
+}
 label.btn {
-    border: 2px solid #00597a;
-    outline: none;
+    margin: 0.45em 0;
+}
+label input {
+    display: none;
 }
 label.active {
     background-color: #00597a;
-    outline: none;
+    border: 2px solid #ffde4a;
 }
-label.focus {
-    outline: 2px solid rgb(255, 222, 74);
-}
-.btn-group {
-    z-index: 0;
-}
-.btn-svg {
+label .btn-svg {
     width: 2em;
     height: 2em;
     fill: #00597a;
@@ -35,11 +122,15 @@ label.active .btn-svg {
     fill: #ffde4a;
 }
 
-
+/* SEÇÃO DOS CARDS */
 section {
-    background-color: #d3dbde;
-    overflow-y: auto;
-    height: 65vh;
+    grid-area: section;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 2em 1em;
+    justify-content: center;
 }
 article {
     display: flex;
@@ -48,10 +139,10 @@ article {
     flex: none;
     width: 230px;
     height: 370px;
-    margin: 0.75em 0.5em;
+    margin: 1em 2em;
     border-radius: 0.5em;
     cursor: pointer;
-    background-color: #F5F0F6;
+    background-color: hsl(270, 25%, 85%);
 }
 article:hover {
     transform: translateY(-5px);
@@ -81,7 +172,6 @@ article a, p, button {
     font-size: 1.1em;
 }
 article a {
-    /* padding-left: 0.5em; */
     font-weight: 600;
     color: #00597a;
 }
@@ -98,20 +188,150 @@ article button svg:hover {
     fill: #881600;
 }
 
+/* MEDIA QUERIES */
 
+/* LANDSCAPE */
 @media only screen and (max-height: 425px) and (orientation: landscape) {
-    section {
-        height: 45vh;
+
+    /* BARRA DE CATEGORIAS ABRIR HORIZONTALMENTE */
+    ul#categories {
+        flex-direction: row;
+        height: fit-content;
+        bottom: 87px;
     }
+    ul#categories li {
+        padding: 0 0.45em;
+    }
+
+    /* BARRA DE PESQUISAS ABRIR HORIZONTALMENTE */
+    div#btn-toolbar{
+        flex-direction: row;
+        height: fit-content;
+        bottom: 87px;
+        right: 330px;
+    }
+    div#first-search {
+        flex-direction: row;
+        margin: 0 1em;
+    }
+    div#second-search {
+        display: flex;
+        flex-direction: row;
+        margin: 0 1em;
+    }
+    
+    
+    label.btn {
+        margin: 0;
+    }
+
     article {
         display: flex;
         width: 450px;
         height: 160px;
-        /* 215px inicialmente */
     }
-
     article img {
         width: 140px;
         height: 140px;
+    }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 992px) {
+    .toolbar {
+        width: 90vw;
+        top: 110px;
+        left: 50px;
+        grid: "categories  search-box searches-toolbar" 50px
+            /  5px        20%       auto;
+        align-items: center;
+        border-radius: 0.5em;
+    }
+
+    /* BOTÕES DE CATEGORIA */
+
+    button#categories-toggle {
+        display: none;
+    }
+    nav.categories {
+        align-self: flex-start;
+    }
+    ul#categories {
+        display: flex !important;
+        top: 70px;
+        border-radius: 0.5em;
+    }
+    ul#categories li {
+        background-color: rgb(255, 222, 74);
+        padding: 0.2em 0.5em;
+        border-radius: 0.5em;
+    }
+    ul#categories li:hover button {
+        background-color: #00597a;
+    }
+    ul#categories button span {
+        display: inline-flex;
+        padding-left: 1em;
+        font-weight: 600;
+        color: #00597a;
+    }
+    ul#categories button:focus span {
+        color: #ffde4a;
+    }
+    ul#categories li:focus, li:hover span {
+        color: #ffde4a !important;
+    }
+    ul#categories li:focus, li:hover svg {
+        fill: #ffde4a;
+    }
+    /* CAIXA DE PESQUISA */
+    .search-box input {
+        z-index: 3;
+        width: 100%;
+    }
+
+    /* BOTÕES DE PESQUISA */
+    button#btn-toolbar-toggle {
+        display: none;
+    }
+    .searches-toolbar {
+        grid-area: searches-toolbar;
+        position: relative;
+        width: 100%;
+        vertical-align: bottom;
+    }
+    div#btn-toolbar{
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        margin: auto;
+    }
+    div#first-search {
+        flex-direction: row;
+        margin: 0;
+        margin-left: 0;
+        margin-right: 4em;
+    }
+    div#second-search {
+        flex-direction: row;
+        margin: 0;
+        margin-left: 4em;
+        margin-right: 0;
+    }
+    label.btn {
+        margin: 0;
+    }
+
+    /* SEÇÃO DOS CARDS */
+    section {
+        grid-area: section;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80vw;
+        margin-top: 70px;
+        margin-bottom: 50px;
+        margin-left: 25vw;
+        padding: 2em 1em;
+        justify-content: center;
     }
 }
