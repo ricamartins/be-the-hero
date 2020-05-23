@@ -3,7 +3,6 @@
 /* MAIN GRID */
 main {
     margin-top: 90px;
-    /* background-color: rgb(255, 222, 74) !important; */
 }
 
 /* TOOLBAR */
@@ -328,10 +327,18 @@ article button svg:hover {
         display: flex;
         flex-wrap: wrap;
         width: 80vw;
-        margin-top: 70px;
+        margin-top: 60px;
         margin-bottom: 50px;
         margin-left: 25vw;
         padding: 2em 1em;
         justify-content: center;
+    }
+
+    div.block {
+        width: 100vw;
+        height: 20px;
+        position: fixed;
+        z-index: 2;
+        background-color: rgb(238, 238, 238);
     }
 }
