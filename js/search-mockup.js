@@ -1,3 +1,4 @@
+// MOCKUP DATABASE
 const DB = {
     "animais": [
         {"nome": "Abrigo Animal Joinville",
@@ -261,6 +262,7 @@ function addCategoriesEventListeners() {
     checkboxes.forEach(function (checkbox) {
         checkbox.addEventListener('click', function () {
 
+            // FAZ UMA NOVA PESQUISA POR CATEGORIA SE O BOTÃO CLICADO FOR DIFERENTE DO QUE JÁ ESTÁ CLICADO
             let toolbar = document.getElementById('toolbar');
             if (toolbar.getAttribute('data-categorie') != checkbox.value) {
                 toolbar.setAttribute('data-categorie', checkbox.value);
@@ -268,8 +270,6 @@ function addCategoriesEventListeners() {
             }
         });
     });
-
-    cardsOpacityOn();
 }
 
 // ADICIONA EVENT LISTENERS PARA OS CHECKBOXES DE FILTRO DE PESQUISA
@@ -284,7 +284,11 @@ function addFiltersEventListeners() {
             let index = filters.indexOf(checkbox.value);
             let searchBox = document.getElementById('search-box');
             
+            // SE TIVER COM UMA PESQUISA POR PALAVRA FAZ UMA PESQUISA POR PALAVRAS E FILTRA APENAS OS CARDS QUE CONTEM A PALAVRA
+            // SENÃO FAÇA PASSE APENAS PELO FILTRO
             if (searchBox.value != '') {
+                // SE ESSE FILTRO NÃO ESTAVA APLICADO, APLIQUE E PASSE PELO FILTRO
+                // SENÃO DESAPLIQUE E PASSE PELO FILTRO NOVAMENTE 
                 if (index == -1) {
 
                     filters.push(checkbox.value);
@@ -298,6 +302,8 @@ function addFiltersEventListeners() {
                 }
                 
             } else {
+                // SE ESSE FILTRO NÃO ESTAVA APLICADO, APLIQUE E PASSE PELO FILTRO
+                // SENÃO DESAPLIQUE E PASSE PELO FILTRO NOVAMENTE 
                 if (index == -1) {
     
                     filters.push(checkbox.value);
@@ -322,6 +328,7 @@ function addSortersEventListeners() {
     radios.forEach(function (radio) {
         radio.addEventListener('click', function () {
 
+            // SE ESSE BOTÃO DE ORDENAÇÃO NÃO ESTAVA SELECIONADO, SELECIONE E FAÇA A ORDENAÇÃO
             let toolbar = document.getElementById('toolbar');
             if (toolbar.getAttribute('data-sorter') != radio.value) {
                 toolbar.setAttribute('data-sorter', radio.value);
@@ -336,6 +343,7 @@ function addSearchBoxEventListener() {
     let searchBox = document.getElementById('search-box');
     let toolbar = document.getElementById('toolbar');
 
+    // QUANDO APERTAR ENTER FAÇA A PESQUISA POR PALAVRA E PASSE PELO FILTRO EM SEGUIDA
     searchBox.addEventListener('keyup', function (event) {
         if (event.key === 'Enter') {
             showCards(JSON.parse(toolbar.getAttribute('data-filters')), wordSearchCards(searchBox.value));
@@ -374,11 +382,11 @@ function requestCards (categorie) {
     return cardList;
 }
 
-// FILTRA OS CARDS DE UMA CATEGORIA DE ACORDO COM OS FILTROS PASSADOS MUDANDO ENTRE DISPLAY NONE E FLEX
+// FILTRA OS CARDS DE UMA CATEGORIA DE ACORDO COM OS FILTROS PASSADOS MUDANDO ENTRE DISPLAY: NONE E FLEX
 function showCards (filters, cards = Array.from(document.getElementById('card-section').children).slice(1)) {
-    // let cards = Array.from(document.getElementById('card-section').children).slice(1);
 
     switch (filters.length) {
+        // SE TIVER UM FILTRO
         case 1:
             cards.forEach(function (card) {
                 if (card.getAttribute('data-type') == filters[0]) {
@@ -388,6 +396,7 @@ function showCards (filters, cards = Array.from(document.getElementById('card-se
                 }
             });
             break;
+            // SE TIVER DOIS FILTROS TESTE OS DOIS
         case 2:
             cards.forEach(function (card) {
                 if (card.getAttribute('data-type') == filters[0] || card.getAttribute('data-type') == filters[1]) {
@@ -397,6 +406,7 @@ function showCards (filters, cards = Array.from(document.getElementById('card-se
                 }
             });
             break;
+        // SE TIVER ZERO OU TRÊS FILTROS MOSTRE TUDO
         default:
             cards.forEach(function (card) {
                 card.style.display = 'flex';
@@ -438,6 +448,8 @@ function sortCards (criteria) {
 function wordSearchCards(phrase) {
     let searchBox = document.getElementsByClassName('search-box')[0];
     let cards = Array.from(document.getElementById('card-section').children).slice(1);
+    
+    // SEPARA A FRASE EM PALAVRAS
     let words = phrase.split(' ');
 
     let cardsFound = [];
@@ -458,6 +470,7 @@ function wordSearchCards(phrase) {
         });
     });
 
+    // SE NÃO ENCONTROU NENHUMA MOSTRE O TEXTO DE 'NENHUM RESULTADO'
     if (found == 0) {
         searchBox.children[1].style.display = 'flex';
     } else {
@@ -481,7 +494,6 @@ function search(categorie, filters, sorter) {
 function cardsOpacityOn() {
     let section = document.getElementById('card-section');
     for (let card = 1; card < section.children.length; card++) {
-        section.children[card].style.display = 'flex';
         section.children[card].style.opacity = 1;
     }
 }
