@@ -3,7 +3,6 @@
 /* MAIN GRID */
 main {
     margin-top: 90px;
-    /* background-color: rgb(255, 222, 74) !important; */
 }
 
 /* TOOLBAR */
@@ -20,6 +19,35 @@ main {
     align-items: start;
 }
 
+/* BOTÕES */
+label.btn {
+    box-sizing: border-box;
+    border: 1px solid #ffde4a;
+}
+label:focus {
+    background-color: #00597a;
+}
+label:focus svg {
+    fill: rgb(255, 222, 74);
+}
+label.active {
+    background-color: #00597a;
+}
+label.active svg {
+    fill: #ffde4a;
+}
+label input {
+    display: none;
+}
+label svg {
+    width: 2em;
+    height: 2em;
+    fill: #00597a;
+    stroke: #00597a;
+    stroke-width: 4px;
+}
+
+
 /* BOTÕES DE CATEGORIA */
 nav.categories {
     grid-area: categories;
@@ -32,7 +60,7 @@ ul#categories {
     flex-direction: column;
     width: fit-content;
     position: relative;
-    bottom: 550px;
+    bottom: 480px;
     z-index: 1;
     padding: 0;
     background-color: #ffde4a;
@@ -41,15 +69,9 @@ ul#categories {
 }
 ul#categories li {
     background-color: rgb(255, 222, 74);
-    padding: 0.45em 0;
+    padding: 0.25em 0;
 }
-ul#categories button:focus {
-    background-color: #00597a;
-}
-ul#categories button:focus svg {
-    fill: rgb(255, 222, 74);
-}
-ul#categories button span {
+ul#categories label span {
     display: none;
 }
 
@@ -69,9 +91,17 @@ ul#categories button span {
     width: 80%;
     height: 70%;
     padding: 0.25em;
-    border: 1px solid #00597a;
+    border: 1px solid #303131;
     border-radius: 0.25em;
     font-size: 1.25em;
+}
+.search-box p#msg-results {
+    display: none;
+    position: absolute;
+    color: #00597a;
+    font-weight: 600;
+    font-size: 1.2em;
+    bottom: 50vh;
 }
 
 /* BOTÕES DE PESQUISA */
@@ -81,7 +111,7 @@ ul#categories button span {
     width: 100%;
     text-align: right;
 }
-div#btn-toolbar{
+div#btn-toolbar {
     background-color: rgb(255, 222, 74);
     display: none;
     flex-direction: column;
@@ -91,35 +121,18 @@ div#btn-toolbar{
     z-index: 1;
     transition: bottom 1s ease-in-out;
 }
-div#first-search {
+div#filter-search {
     display: flex;
     flex-direction: column;
     margin: 0 0 1em;
 }
-div#second-search {
+div#sort-search {
     display: flex;
     flex-direction: column;
     margin: 1em 0 0;
 }
-label.btn {
+div#btn-toolbar label.btn {
     margin: 0.45em 0;
-}
-label input {
-    display: none;
-}
-label.active {
-    background-color: #00597a;
-    border: 2px solid #ffde4a;
-}
-label .btn-svg {
-    width: 2em;
-    height: 2em;
-    fill: #00597a;
-    stroke: #00597a;
-    stroke-width: 4px;
-}
-label.active .btn-svg {
-    fill: #ffde4a;
 }
 
 /* SEÇÃO DOS CARDS */
@@ -133,16 +146,18 @@ section {
     justify-content: center;
 }
 article {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-around;
     flex: none;
     width: 230px;
-    height: 370px;
+    height: 400px;
     margin: 1em 2em;
     border-radius: 0.5em;
     cursor: pointer;
     background-color: hsl(270, 25%, 85%);
+    opacity: 0;
+    transition: opacity 2s ease;
 }
 article:hover {
     transform: translateY(-5px);
@@ -160,8 +175,9 @@ article .content {
 }
 article .content-title {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 0.8em;
 }
 article .content-body {
     display: flex;
@@ -188,6 +204,24 @@ article button svg:hover {
     fill: #881600;
 }
 
+.loader {
+    width: 3em;
+    height: 3em;
+    border: 4px solid #d9cfe2;
+    border-top: 4px solid#881600;
+    border-radius: 1.5em;
+    position: fixed;
+    left: 45vw;
+    top: 45vh;
+    opacity: 1;
+    transition: opacity 1s ease;
+    animation: spin 0.8s linear 5;
+}
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 /* MEDIA QUERIES */
 
 /* LANDSCAPE */
@@ -197,42 +231,47 @@ article button svg:hover {
     ul#categories {
         flex-direction: row;
         height: fit-content;
-        bottom: 87px;
+        bottom: 85px;
     }
     ul#categories li {
-        padding: 0 0.45em;
+        padding: 0 0.35em;
+    }
+
+    /* BARRA DE PESQUISA */
+    .search-box p#msg-results {
+        bottom: 35vh;
     }
 
     /* BARRA DE PESQUISAS ABRIR HORIZONTALMENTE */
     div#btn-toolbar{
         flex-direction: row;
         height: fit-content;
-        bottom: 87px;
-        right: 330px;
+        bottom: 85px;
+        right: 325px;
     }
-    div#first-search {
+    div#filter-search {
         flex-direction: row;
         margin: 0 1em;
     }
-    div#second-search {
+    div#sort-search {
         display: flex;
         flex-direction: row;
         margin: 0 1em;
     }
     
-    
-    label.btn {
+    div#btn-toolbar label.btn {
         margin: 0;
     }
 
     article {
         display: flex;
         width: 450px;
-        height: 160px;
+        height: 180px;
     }
     article img {
         width: 140px;
         height: 140px;
+        margin: 1.5em 0.5em;
     }
 }
 
@@ -266,16 +305,16 @@ article button svg:hover {
         padding: 0.2em 0.5em;
         border-radius: 0.5em;
     }
-    ul#categories li:hover button {
+    ul#categories li:hover label {
         background-color: #00597a;
     }
-    ul#categories button span {
+    ul#categories label span {
         display: inline-flex;
         padding-left: 1em;
         font-weight: 600;
         color: #00597a;
     }
-    ul#categories button:focus span {
+    ul#categories label:focus span {
         color: #ffde4a;
     }
     ul#categories li:focus, li:hover span {
@@ -284,10 +323,18 @@ article button svg:hover {
     ul#categories li:focus, li:hover svg {
         fill: #ffde4a;
     }
+    ul#categories label.active span {
+        color: #ffde4a;
+    }
+    
     /* CAIXA DE PESQUISA */
     .search-box input {
         z-index: 3;
         width: 100%;
+    }
+    .search-box p#msg-results {
+        top: 35vh;
+        left: 40vw;
     }
 
     /* BOTÕES DE PESQUISA */
@@ -306,19 +353,19 @@ article button svg:hover {
         position: static;
         margin: auto;
     }
-    div#first-search {
+    div#filter-search {
         flex-direction: row;
         margin: 0;
         margin-left: 0;
         margin-right: 4em;
     }
-    div#second-search {
+    div#sort-search {
         flex-direction: row;
         margin: 0;
         margin-left: 4em;
         margin-right: 0;
     }
-    label.btn {
+    div#btn-toolbar label.btn {
         margin: 0;
     }
 
@@ -328,10 +375,23 @@ article button svg:hover {
         display: flex;
         flex-wrap: wrap;
         width: 80vw;
-        margin-top: 70px;
+        margin-top: 60px;
         margin-bottom: 50px;
         margin-left: 25vw;
         padding: 2em 1em;
-        justify-content: center;
+        justify-content: left;
+    }
+
+    div.block {
+        width: 100vw;
+        height: 20px;
+        position: fixed;
+        z-index: 2;
+        background-color: rgb(238, 238, 238);
+    }
+
+    .loader {
+        left: 55vw;
+        top: 55vh;
     }
 }

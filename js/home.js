@@ -1,25 +1,39 @@
-// MUDA QUAL RADIO BUTTON ESTÁ ATIVO NO PRIMEIRO GRUPO DE PESQUISA
-let firstSearchRadios = document.getElementsByName('first-search');
-for(let i = 0; i < firstSearchRadios.length; i++) {
+// MUDA QUAL CHECKBOX ESTÁ ATIVO NA PESQUISA POR CATEGORIA
+let categoriesCheckboxes = document.getElementsByName('categories');
+for(let i = 0; i < categoriesCheckboxes.length; i++) {
 
-    firstSearchRadios[i].addEventListener('change', function () {
-        for(let j = 0; j < firstSearchRadios.length; j++) {
-            firstSearchRadios[j].parentElement.classList.remove('active');
-            if (firstSearchRadios[j].checked) {
-                firstSearchRadios[j].parentElement.classList.add('active');
+    categoriesCheckboxes[i].addEventListener('change', function () {
+        for(let j = 0; j < categoriesCheckboxes.length; j++) {
+            categoriesCheckboxes[j].parentElement.classList.remove('active');
+            if (categoriesCheckboxes[j].checked) {
+                categoriesCheckboxes[j].parentElement.classList.add('active');
             }
         }
     });
 }
-// MUDA QUAL RADIO BUTTON ESTÁ ATIVO NO SEGUNDO GRUPO DE PESQUISA
-let secondSearchRadios = document.getElementsByName('second-search');
-for(let i = 0; i < secondSearchRadios.length; i++) {
 
-    secondSearchRadios[i].addEventListener('change', function () {
-        for(let j = 0; j < secondSearchRadios.length; j++) {
-            secondSearchRadios[j].parentElement.classList.remove('active');
-            if (secondSearchRadios[j].checked) {
-                secondSearchRadios[j].parentElement.classList.add('active');
+// MUDA QUAL CHECKBOX ESTÁ ATIVO NA PESQUISA POR TIPO
+let filterSearchRadios = document.getElementsByName('filter-search');
+for(let i = 0; i < filterSearchRadios.length; i++) {
+
+    filterSearchRadios[i].addEventListener('change', function () {
+        for(let j = 0; j < filterSearchRadios.length; j++) {
+            filterSearchRadios[j].parentElement.classList.remove('active');
+            if (filterSearchRadios[j].checked) {
+                filterSearchRadios[j].parentElement.classList.add('active');
+            }
+        }
+    });
+}
+// MUDA QUAL RADIO BUTTON ESTÁ ATIVO NA ORDENAÇÃO
+let sortSearchRadios = document.getElementsByName('sort-search');
+for(let i = 0; i < sortSearchRadios.length; i++) {
+
+    sortSearchRadios[i].addEventListener('change', function () {
+        for(let j = 0; j < sortSearchRadios.length; j++) {
+            sortSearchRadios[j].parentElement.classList.remove('active');
+            if (sortSearchRadios[j].checked) {
+                sortSearchRadios[j].parentElement.classList.add('active');
             }
         }
     });
