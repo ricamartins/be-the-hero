@@ -1,128 +1,506 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Página Inicial</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Login -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel='stylesheet' id='compiled.css-css'  href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.18.0.min.css?ver=4.18.0' type='text/css' media='all' />
 
    
-
+    <!-- index -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
 
-<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog cascading-modal" role="document">
+          <a  class="navbar-brand icone" href="#">
+            <img src="img/titulo.png" id="logo-principal">
+          </a>
+  
+          <!-- Toggler -->
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- Collapse -->
+          <div class="navbar-collapse collapse" id="navbarCollapse">
+  
+            <!-- Toggler -->
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fe fe-x"></i>
+            </button>
+  
+            <!-- Menu de navegação -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" id="navbarLandings" href="#" aria-haspopup="true" aria-expanded="false">
+                  Home
+                </a>
+              </li>
 
-    <div class="modal-content">
+              <li class="nav-item ">
+                <a class="nav-link" id="navbarPages" href="#" aria-haspopup="true" aria-expanded="false">
+                  Sobre nós
+                </a>    
+              </li>
 
+              <li class="nav-item">
+                <a class="nav-link" id="navbarAccount" href="#" aria-haspopup="true" aria-expanded="false">
+                  Serviços
+                </a>
+               
+              </li>
 
-      <div class="modal-c-tabs">
+              <li class="nav-item ">
+                <a class="nav-link" id="navbarPages" href="#" aria-haspopup="true" aria-expanded="false">
+                  Contato
+                </a> 
+              </li>
+            </ul>
 
-        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
-              Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
-              Registrar-se</a>
-          </li>
-        </ul>
+            <!---form de login/cadastro-->
 
-        <div class="tab-content">
+            
+  
+            <!-- Botão entrar -->
 
-          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
-            <div class="modal-body mb-1">
-              <div class="md-form form-sm mb-5">
-                <i class="fas fa-envelope prefix"></i>
-                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput10">Insira seu email</label>
-              </div>
-
-              <div class="md-form form-sm mb-4">
-                <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput11"  class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput11" id="oi">Insira a senha</label>
-              </div>
-              <div class="text-center mt-2">
-                <button class="btn btn-info">Entrar <i class="fas fa-sign-in ml-1"></i></button>
+            <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog cascading-modal" role="document">
+            
+                <div class="modal-content">
+            
+            
+                  <div class="modal-c-tabs">
+            
+                    <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                          Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                          Registrar-se</a>
+                      </li>
+                    </ul>
+            
+                    <div class="tab-content">
+            
+                      <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+            
+                        <div class="modal-body mb-1">
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas fa-envelope prefix"></i>
+                            <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput10">Insira seu email</label>
+                          </div>
+            
+                          <div class="md-form form-sm mb-4">
+                            <i class="fas fa-lock prefix"></i>
+                            <input type="password" id="modalLRInput11"  class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput11" id="oi">Insira a senha</label>
+                          </div>
+                          <div class="text-center mt-2">
+                            <button class="btn btn-info">Entrar <i class="fas fa-sign-in ml-1"></i></button>
+                          </div>
+                        </div>
+            
+                        <div class="modal-footer">
+                          <div class="options text-center text-md-right mt-1">
+                            <p>Esqueceu a <a href="#" class="blue-text">Senha?</a></p>
+                          </div>
+                          <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+                        </div>
+            
+                      </div>
+            
+                      <div class="tab-pane fade" id="panel8" role="tabpanel">
+            
+                        <div class="modal-body">
+            
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas fa-user prefix"></i>
+                            <input type="text" id="modalLRInput15" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput15" id="oi">Insira seu nome</label>
+                          </div>
+            
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas fa-address-card prefix"></i>
+                            <input type="text" id="modalLRInput16" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput16" id="oi">Insira seu CPF</label>
+                          </div>
+            
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas fa-envelope prefix"></i>
+                            <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput12" id="oi">Insira seu email</label>
+                          </div>
+            
+                          <div class="md-form form-sm mb-5">
+                            <i class="fas fa-lock prefix"></i>
+                            <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput13" id="oi">Insira a senha</label>
+                          </div>
+            
+                          <div class="md-form form-sm mb-4">
+                            <i class="fas fa-lock prefix"></i>
+                            <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput14" id="oi">Confirme a senha</label>
+                          </div>
+            
+                          <div class="text-center form-sm mt-2">
+                            <button class="btn btn-info">Registrar-se <i class="fas fa-sign-in ml-1"></i></button>
+                          </div>
+            
+                        </div>
+            
+                        <div class="modal-footer">
+                          <div class="options text-right">
+                          </div>
+                          <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+            
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="modal-footer">
-              <div class="options text-center text-md-right mt-1">
-                <p>Esqueceu a <a href="#" class="blue-text">Senha?</a></p>
-              </div>
-              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+            <div class="text-center ml-auto">
+              <a href="" class="btn btn-info btn-rounded my-3 btn-primary" data-toggle="modal" data-target="#modalLRForm">
+                Logar/Registrar-se</a>
             </div>
 
           </div>
 
-          <div class="tab-pane fade" id="panel8" role="tabpanel">
+          
 
-            <div class="modal-body">
+        </div>
+    </nav>
 
-              <div class="md-form form-sm mb-5">
-                <i class="fas fa-user prefix"></i>
-                <input type="text" id="modalLRInput15" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput15" id="oi">Insira seu nome</label>
-              </div>
+    <main>
+        <section class="pt-4 pt-md-11" id="conteudo">
+            <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-12 col-md-5 col-lg-6 order-md-2">
+                    <img src="img/bg2.svg" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate" alt="..." data-aos="fade-up" data-aos-delay="100">
+                  </div>
 
-              <div class="md-form form-sm mb-5">
-                <i class="fas fa-address-card prefix"></i>
-                <input type="text" id="modalLRInput16" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput16" id="oi">Insira seu CPF</label>
-              </div>
+                  <div class="col-12 col-md-7 col-lg-6 order-md-1 aos-init aos-animate" data-aos="fade-up">
+      
+                  <h1 class="display-3 text-center text-md-left">
+                      Bem vindo <span class="text-primary">Herói</span>. <br>
+                  </h1>
+      
+                 
+                  <p class="boas-vindas lead text-center text-md-left text-muted mb-6 mb-lg-8">
+                      Seja bem vindo ao <strong class="titulo"> Be the Hero! </strong> Aqui você tem acesso a diversos cursos gratuitos. Além disso,
+                      conectamos você, pessoa amavél, a diversas pessoas que precisam de ajuda. 
+                  </p>
+      
+                  <div>
+                      <button type="button" class="primeiro-botao btn btn-secondary btn-lg btn-danger btn-primary"><a href="#sobre">
+                        Ler mais
+                      </a></button>
+                  </div>
+      
+                  </div>
+              </div> 
+            </div> 
+        </section>
 
-              <div class="md-form form-sm mb-5">
-                <i class="fas fa-envelope prefix"></i>
-                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput12" id="oi">Insira seu email</label>
-              </div>
-
-              <div class="md-form form-sm mb-5">
-                <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput13" id="oi">Insira a senha</label>
-              </div>
-
-              <div class="md-form form-sm mb-4">
-                <i class="fas fa-lock prefix"></i>
-                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
-                <label data-error="wrong" data-success="right" for="modalLRInput14" id="oi">Confirme a senha</label>
-              </div>
-
-              <div class="text-center form-sm mt-2">
-                <button class="btn btn-info">Registrar-se <i class="fas fa-sign-in ml-1"></i></button>
-              </div>
-
+        <!-- Sobre-->
+        <section class="conteudo-blog pt-4 pt-md-11">
+          <div class="blog-post">
+            <div class="blog-post-img">
+              <img src="img/sobre.jpg">
             </div>
 
-            <div class="modal-footer">
-              <div class="options text-right">
-              </div>
-              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+            <div class="blog-post-info">
+              <h1 class="blog-post-title">Sobre Nós</h1>
+              <p class="blog-post-text">
+                Nossa iniciativa surgiu a partir de um projeto desenvolvimento no curso 
+                          de Front-end oferecido pela Digital House em parceria com o Facebook. 
+                          Nossa equipe é formada por cinco desenvolvedores. Para mais informações sobre a plataforma, cadastre-se!
+              </p>
+              <a class="blog-post-cta" href="#">Cadastre-se</a>
             </div>
+          </div>
+        </section>
+
+        <!-- Serviços -->
+        <section class="pt-8 py-md-11">
+            <div class="container">
+              <div class="row">
+                  <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up">
+      
+                  <!-- Icon -->
+                  <div class="icon text-primary mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M7 3h10a4 4 0 110 8H7a4 4 0 110-8zm0 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"></path><path d="M7 13h10a4 4 0 110 8H7a4 4 0 110-8zm10 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA" opacity=".3"></path></g></svg>
+                  </div>
+      
+                  <!-- Heading -->
+                  <h3>
+                      Cursos
+                  </h3>
+      
+                  <!-- Text -->
+                  <p class="text-muted mb-6 mb-md-0">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text of the printing and 
+                      typesetting industry.Lorem Ipsum is simply dummy text.
+                  </p>
+      
+                  </div>
+
+                  <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+      
+                  <!-- Icon -->
+                  <div class="icon text-primary mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M5.5 4h4A1.5 1.5 0 0111 5.5v1A1.5 1.5 0 019.5 8h-4A1.5 1.5 0 014 6.5v-1A1.5 1.5 0 015.5 4zm9 12h4a1.5 1.5 0 011.5 1.5v1a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-1a1.5 1.5 0 011.5-1.5z" fill="#335EEA"></path><path d="M5.5 10h4a1.5 1.5 0 011.5 1.5v7A1.5 1.5 0 019.5 20h-4A1.5 1.5 0 014 18.5v-7A1.5 1.5 0 015.5 10zm9-6h4A1.5 1.5 0 0120 5.5v7a1.5 1.5 0 01-1.5 1.5h-4a1.5 1.5 0 01-1.5-1.5v-7A1.5 1.5 0 0114.5 4z" fill="#335EEA" opacity=".3"></path></g></svg>
+                  </div>
+      
+                  <!-- Heading -->
+                  <h3>
+                      ONG
+                  </h3>
+      
+                  <!-- Text -->
+                  <p class="text-muted mb-6 mb-md-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry.Lorem Ipsum is simply dummy text.
+                </p>
+      
+                  </div>
+                  <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+      
+                  <!-- Icon -->
+                  <div class="icon text-primary mb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M17.272 8.685a1 1 0 111.456-1.37l4 4.25a1 1 0 010 1.37l-4 4.25a1 1 0 01-1.456-1.37l3.355-3.565-3.355-3.565zm-10.544 0L3.373 12.25l3.355 3.565a1 1 0 01-1.456 1.37l-4-4.25a1 1 0 010-1.37l4-4.25a1 1 0 011.456 1.37z" fill="#335EEA"></path><rect fill="#335EEA" opacity=".3" transform="rotate(15 12 12)" x="11" y="4" width="2" height="16" rx="1"></rect></g></svg>
+                  </div>
+      
+                  <!-- Heading -->
+                  <h3>
+                      Doação
+                  </h3>
+      
+                  <!-- Text -->
+                  <p class="text-muted mb-6 mb-md-0">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text of the printing and 
+                    typesetting industry.Lorem Ipsum is simply dummy text.
+                </p>
+      
+                  </div>
+              </div> 
+            </div> 
+        </section>
+
+        <!-- Contato -->
+        <section class="pt-4 pt-md-11">
+            <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-12 col-md-5 col-lg-6 order-md-2">
+      
+                  <!-- Image -->
+                  <img src="img/contato.jpg" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0 aos-init aos-animate" alt="..." data-aos="fade-up" data-aos-delay="100">
+      
+                  </div>
+                  <div class="col-12 col-md-7 col-lg-6 order-md-1 aos-init aos-animate" data-aos="fade-up">
+      
+                  <!-- Heading -->
+                  <h1 class="display-3 text-center text-md-left">
+                      <span class="text-primary">Contato</span>. <br>
+                  
+                  </h1>
+      
+                  <!-- Text -->
+                  <p class="lead text-center text-md-left text-muted mb-6 mb-lg-8">
+                      Nós adoramos quando você vem aqui. Sinta-se a vontade para falar conosco.
+                  </p>
+
+    
+      
+                  </div>
+              </div> 
+            </div> 
+        </section>
+
+        
+        <!-- Form e mapa -->
+        <section class="pt-4 pt-md-11"> 
+          <div class="container">
+            <!--Section: Contact v.1-->
+              <section class="section pb-5">
+
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="card-body col-lg-5 mb-4">
+
+                    <!--Form with header-->
+
+                    <div class="form-header">
+                      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
+                      <h3> Escreva-nos:</h3>
+                    </div>
+
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-12 col-lg-offset-3 ">
+                          <form >
+   
+                          <div class="form-group">
+                            <input type="text" class="form-control" id="nome" autocomplete="off">
+                            <label for="nome">Nome</label>
+                          </div>
+
+                           <div class="form-group">
+                            <input type="email" class="form-control" id="email" autocomplete="off">
+                            <label for="email">Email</label>
+                          </div>
+                          
+                          <div class="form-group">
+                            <textarea class="form-control" name="mensagem" id="mensagem" cols="20" rows="10" autocomplete="off"></textarea>
+                            <label for="">Mensagem</label>
+                          </div>
+                  
+                          <div class="text-center">
+                            <button type="submit" class="btn btn-default disabled">Enviar</button>
+                          </div>
+                          
+                        </form>
+                        </div>
+                      </div>
+                    </div> 
+                    <!--Form with header-->
+
+                  </div>
+
+                  <div class="col-lg-7">
+
+                    <!--Google map-->
+                    <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0479761312095!2d-46.677530585955125!3d-23.602612284662428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50ab7feb4519%3A0x739f0ddb0439cf94!2sDigital%20House%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1589583552007!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                    <br>
+
+                    <!--Buttons-->
+                    <div class="row text-center">
+                      <div class="col-md-4">
+                        
+                        <div class="emotion">
+                          <a href="#">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
+                          </a>
+                        </div>
+
+                        <a class="btn-floating blue accent-1"></a>
+                        <p>São Paulo, SP</p>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="emotion">
+                          <a href="#">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path></svg>
+                          </a>
+                        </div>
+                        <p>+ 55 11 9 7665 3495</p>
+                        <p>Seg - Sexta, 9:00-22:00</p>
+                      </div>
+
+                      <div class="col-md-4">
+
+                        <div class="emotion">
+                          <a href="#">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>                     
+                          </a>
+                        </div>
+                        
+                        <p>info@gmail.com</p>
+                        <p>bethehero@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+          </div>
+        </section>
+
+    </main>
+
+    
+    <footer>
+      
+      <div class="container-fluid footer ">
+    
+        <hr class="rgba-white-light" style="margin: 0 15%;">
+
+        <div class="row pb-3">
+    
+          <div class="col-md-12">
+              <section class="redes">
+                <div class="rede" id="facebook">
+                  <img class="rede-icone" src="img/images/facebook.png">
+                </div>
+                
+                <div class="rede" id="twitter">
+                  <img class="rede-icone" src="img/images/twitter.png">
+                </div>
+
+                <div class="rede" id="youtube">
+                  <img class="rede-icone" src="img/images/youtube.png">
+                </div>
+
+                <div class="rede" id="instagram">
+                  <img class="rede-icone" src="img/images/instagram.png">
+                </div>
+              </section>
+          </div>
+    
+        </div>
+    
+      </div>
+
+      <section class="pt-md-11">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md text-center">
+              <small class="footer-copyright d-block mb-3 text-muted">© 2020 Copyright:</small>
+              <a class="footer-copyright" href="#"> Be the Hero</a>
+            </div>
+         
           </div>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="text-center">
-  <a href="" class="btn btn-info btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">
-    Logar/Registrar-se</a>
-</div>
+  </footer>
 
+    <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <!--Login-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   
     <script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bundles/4.18.0/compiled.0.min.js?ver=4.18.0'></script>
+
+
+    <script src="js/jquery.min.js" ></script> 
+    <script src="js/index.js" ></script>
 
 </body>
 </html>
