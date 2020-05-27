@@ -6,7 +6,7 @@ body{
 .menu1, .menu2{
     z-index: 5;
     position: fixed;
-    background-color: rgb(255, 222, 74);
+    background-color: #ffde4a;
     height:90px;
     display: flex;
     align-items: center;
@@ -123,7 +123,7 @@ a:hover, a:focus{
     font-size: 0.6em;
 }
 
-main .row{
+header.row{
     margin: 0 20%;
 }
 
