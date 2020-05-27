@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' id='compiled.css-css'  href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-4.18.0.min.css?ver=4.18.0' type='text/css' media='all' />
 
+   
+
+</head>
+<body>
+
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog cascading-modal" role="document">
+
+    <div class="modal-content">
+
+
+      <div class="modal-c-tabs">
+
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Registrar-se</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput10">Insira seu email</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput11"  class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput11" id="oi">Insira a senha</label>
+              </div>
+              <div class="text-center mt-2">
+                <button class="btn btn-info">Entrar <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <div class="options text-center text-md-right mt-1">
+                <p>Esqueceu a <a href="#" class="blue-text">Senha?</a></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <div class="modal-body">
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-user prefix"></i>
+                <input type="text" id="modalLRInput15" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput15" id="oi">Insira seu nome</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-address-card prefix"></i>
+                <input type="text" id="modalLRInput16" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput16" id="oi">Insira seu CPF</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput12" id="oi">Insira seu email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput13" id="oi">Insira a senha</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modalLRInput14" id="oi">Confirme a senha</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info">Registrar-se <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+
+            </div>
+
+            <div class="modal-footer">
+              <div class="options text-right">
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-info btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">
+    Logar/Registrar-se</a>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bundles/4.18.0/compiled.0.min.js?ver=4.18.0'></script>
+
+</body>
+</html>
