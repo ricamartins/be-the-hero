@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-right: 0px;
 }
 
 
@@ -73,7 +72,7 @@ li a:hover {
     border-color:#FF5353!important;
     text-transform: uppercase;
     font-weight: bold;
-    opacity:.90;
+    opacity:.80;
 }
 
 .btn-primary:hover {
@@ -216,7 +215,7 @@ li a:hover {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     border-radius: .8rem;
     text-decoration: none;
-    margin-left: 320px;
+    margin-left: 340px;
 }
 
 .blog-post-cta:hover {
@@ -327,10 +326,10 @@ label.active{
     padding:0 5px;
 }
 
-.botao-contato {
-    background-color: #007bff!important;
-    border-color: #007bff!important;
-    color: white!important;
+.btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -403,9 +402,6 @@ svg {
     border: 0;
 }
 
-p {
-    margin-bottom: inherit;
-}
 
 /* footer */
 
