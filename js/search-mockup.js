@@ -199,10 +199,15 @@ function createCard(cardInfo) {
     card.setAttribute('data-date', cardInfo['data']);
     card.setAttribute('data-type', cardInfo['tipo']);
 
+    // CRIA CONTAINER DA IMAGEM
+    let holder = document.createElement('div');
+    holder.classList.add('img-holder');
+    card.appendChild(holder);
+
     // CRIA IMAGEM
     let img = document.createElement('img');
     img.src = cardInfo['image'];
-    card.appendChild(img);
+    holder.appendChild(img);
 
     // CRIA ÁREA DE CONTEUDO
     let content = document.createElement('div');

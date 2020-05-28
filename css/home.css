@@ -154,18 +154,30 @@ article {
     height: 400px;
     margin: 1em 1.2em;
     cursor: pointer;
-    background-color: hsl(270, 25%, 85%);
+    background-color: #d9cfe2;
     opacity: 0;
     transition: opacity 2s ease;
 }
 article:hover {
     transform: translateY(-5px);
-    box-shadow: 5px 5px hsla(0, 0%, 0%, 5%);
+    transition: transform 0.25s linear;
+    box-shadow: 1px 8px 20px 0px hsl(0, 0%, 50%);
+}
+article .img-holder {
+    overflow: hidden;
+    width: 215px;
+    height: 215px;
+    transition: height 0.5s ease-in-out;
 }
 article img {
+    object-fit: cover;
     width: 215px;
     height: 215px;
 }
+/* article:hover .img-holder {
+    height: 155px;
+    transition: height 0.5s ease-in-out;
+} */
 article .content {
     width: 230px;
     height: 150px;
@@ -196,6 +208,8 @@ article button {
     padding: 0 !important;
 }
 article button svg {
+    width: 1.4em;
+    height: 1.4em;
     fill: #00597a;
 }
 article button svg:hover {
@@ -266,6 +280,10 @@ article button svg:hover {
         width: 425px;
         height: 180px;
         justify-content: space-between;
+    }
+    article .img-holder {
+        width: 180px;
+        height: 180px
     }
     article img {
         width: 180px;
