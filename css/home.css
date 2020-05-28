@@ -58,9 +58,11 @@ nav.categories {
 ul#categories {
     display: none;
     flex-direction: column;
+    justify-content: space-around;
     width: fit-content;
+    height: calc(100vh - 140px);
     position: relative;
-    bottom: 480px;
+    bottom: calc(100vh - 96px);
     z-index: 1;
     padding: 0;
     background-color: #ffde4a;
@@ -115,9 +117,11 @@ div#btn-toolbar {
     background-color: rgb(255, 222, 74);
     display: none;
     flex-direction: column;
+    justify-content: space-around;
     width: fit-content;
+    height: calc(100vh - 140px);
     position: relative;
-    bottom: 400px;
+    bottom: calc(100vh - 96px);
     z-index: 1;
     transition: bottom 1s ease-in-out;
 }
@@ -242,11 +246,16 @@ article button svg:hover {
     /* BARRA DE CATEGORIAS ABRIR HORIZONTALMENTE */
     ul#categories {
         flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
         height: fit-content;
         bottom: 85px;
     }
     ul#categories li {
         padding: 0 0.35em;
+    }
+    ul#categories li:first-child {
+        padding-left: 0;
     }
 
     /* BARRA DE PESQUISA */
@@ -257,9 +266,10 @@ article button svg:hover {
     /* BARRA DE PESQUISAS ABRIR HORIZONTALMENTE */
     div#btn-toolbar{
         flex-direction: row;
+        width: 100vw;
         height: fit-content;
         bottom: 85px;
-        right: 325px;
+        right: calc(100vw - 55px);
     }
     div#filter-search {
         flex-direction: row;
@@ -314,12 +324,13 @@ article button svg:hover {
         display: flex !important;
         height: calc(100vh - 90px);
         top: 0;
+        bottom: unset;
     }
     ul#categories li {
         background-color: rgb(255, 222, 74);
         padding: 0.2em 0.5em;
         border-radius: 0.5em;
-        margin: 0.5em 0;
+        margin: 0;
     }
     ul#categories li:hover label {
         background-color: #00597a;
@@ -374,6 +385,7 @@ article button svg:hover {
         display: flex !important;
         flex-direction: row;
         position: static;
+        height: auto;
         margin: auto;
         padding: 0.75em 0;
         background-color: transparent;
