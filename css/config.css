@@ -1,0 +1,110 @@
+main{
+    background-color: white;
+    position: absolute;
+    top: 130px;
+    left: 20%;
+    height: 50%;
+    border-radius: 5px;
+    border: thin rgb(207, 207, 207) solid;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+main .buttons{
+    width: 30%;
+    height: 100%;
+    border-right: thin rgb(207, 207, 207) solid;
+}
+
+a{
+    color: black;
+    border-left: 3px white solid;
+}
+
+#current{
+    font-weight: bold;
+}
+
+#current:hover{
+    color: black;
+}
+
+#other:hover{
+    color: black;
+    background-color: rgb(241, 241, 241);
+    border-left: 3px rgb(214, 214, 214) solid;
+}
+
+.buttons .button{
+    font-size: 1.3em;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.buttons #current{
+    border-left: 3px black solid;
+}
+
+main .infos{
+    width: 70%;
+    height: 100%;
+}
+
+.infos .info{
+    display: flex;
+    width: 100%;
+}
+
+.infos #img{
+    height: 80px;
+}
+
+.infos #bio{
+    height: 100px;
+}
+
+.infos #name, .infos #email, .infos #tel{
+    height: 50px;
+}
+
+.info .name{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+
+#bio .name{
+    padding-top: 20px;
+    align-items: flex-start;
+}
+
+#alterarfoto{
+    font-weight: bold;
+    color: #00597a;
+}
+
+.info .input{
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input, textarea{
+    padding-left: 5px;
+    resize: none;
+    border: thin rgb(207, 207, 207) solid;
+    border-radius: 3px;
+    height: 65%;
+    width: 70%;
+}
