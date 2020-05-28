@@ -86,6 +86,17 @@ li a:hover {
     margin-left: 10px;
 }
 
+.btn-info {
+    border-color: inherit;
+}
+
+.btn-info:hover {
+    border-color: inherit;
+}
+
+.btn-outline-info {
+    padding: .84rem 2.0rem;
+}
 
 
 /* Main */
