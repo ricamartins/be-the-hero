@@ -1,12 +1,14 @@
 * {
-    margin: 0;
+    margin: 0;;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-right: 0px!important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    width: 100vw;
 }
 
 /* menu */
@@ -311,7 +313,7 @@ form {
 }
 
 .form-group {
-position:relative;
+    position:relative;
 }
 
 .form-control {
@@ -496,18 +498,27 @@ a:hover {
 
     display: none;
 
-    padding: 10px;
+    padding: 6px 5px;
     width: 50px;
     height: 50px;
     border-radius: 50vh;
+    text-align: center;
+}
+#btnTopo i.material-icons {
+    font-size: 38px;
+    line-height: 0.9;
 }
 
 /* responsividade */
 
 
 @media only screen and (max-width: 700px) {
+    .redes {
+        width: 320px;
+    }
+
     svg {
-        margin-left: 100px;
+        margin-left: 20px;
     }
 
     .emotion {
@@ -526,16 +537,22 @@ a:hover {
 
     
     .primeiro-botao {
-        margin-left: 210px;
+        margin: 100px;
         margin-bottom: 30px;
     }
 
     .blog-post-cta {
-        margin-left: 160px;
+        margin-left: 15px;
+        padding: 1.5rem 2rem;
     }
 
     .blog-post-title {
-        margin-left: 160px; 
+        margin: 1.5rem 0 2rem;
+    }
+
+    .blog-post-text {
+        width: 75%;
+        text-align: center;
     }
     
 
