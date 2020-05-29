@@ -1,12 +1,18 @@
-main{
-    background-color: white;
+.main{
+    left:0;
     position: absolute;
     top: 130px;
-    left: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     height: 50%;
+}
+main{
+    background-color: white;
+    height: 100%;
     border-radius: 5px;
     border: thin rgb(207, 207, 207) solid;
-    width: 60%;
+    width: 800px;
     display: flex;
     flex-direction: row;
 }
@@ -18,7 +24,7 @@ main .buttons{
     border-right: thin rgb(207, 207, 207) solid;
 }
 
-a{
+.buttons a{
     color: black;
     border-left: 3px white solid;
 }
@@ -107,4 +113,88 @@ input, textarea{
     border-radius: 3px;
     height: 65%;
     width: 70%;
+}
+
+@media (max-width: 800px), (max-height: 800px){
+    .main{
+        top: 90px;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    main{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    main{
+        height: calc(100%-90px);
+    }
+    .buttons{
+        display: none;
+    }
+    main .infos{
+        width: 100%;
+    }
+    .infos .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+    }
+   
+    .infos #bio{
+        height: 200px;
+    }
+    
+    .infos #name, .infos #email, .infos #tel{
+        height: 70px;
+    }
+    
+    .info .name{
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #img .name{
+        padding-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .infos #img{
+        height: 200px;
+    }
+
+    img{
+        width: 130px;
+    }
+     
+    
+    #bio .name{
+        height: 60px;
+        align-items: flex-start;
+    }
+        
+    .info .input{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 20px;
+    }
+    
+    input, textarea{
+        resize: none;
+        border: thin rgb(207, 207, 207) solid;
+        border-radius: 3px;
+        height: 100%;
+        width: 100%;
+    }
+
 }
