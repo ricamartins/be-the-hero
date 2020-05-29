@@ -31,6 +31,7 @@ header.row2 {
 }
 #Nome{
     padding-top: 2vh;
+    padding-bottom: 2vh;
     font-size: 30px;
     color: white;
     font-weight: 600;
@@ -43,7 +44,7 @@ header.row2 {
 }
 #About2{
     background-color: white;
-    color:  #0299ac;
+    color:  #000;
 }
 h3#Sobre{
     font-family:'Montserrat', sans-serif;
@@ -61,7 +62,8 @@ h3#Sobre{
 
 #Info{
     font-size: 16px ;
-    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
     color: white;
     line-height: 20px;
 }
@@ -83,18 +85,28 @@ div>button.Config{
     margin: 20px auto 0 auto ;
     font-size: 28px;
 }
+#MeusCursos{
+    text-align: center;
+    margin-top: 30px;
+    background-color: white;
+    box-sizing: border-box;
+}
+.espacamento{
+    padding-left: 13%;
+}
 
 
 @media (min-width: 700px) and (max-width: 1139px){
     .Main{
-    margin-top: 15%; 
+    margin: 15% auto;
+    width: 70vw; 
     }
     /*-----Cabeçalho Perfil-----*/
     .AlterarPerfil{
         padding-top: 5vh;
-        padding-bottom: 5vh;
+        padding-bottom: 2vh;
         width: 70vw;
-        margin: 22% auto 0 auto;
+        margin: 30% auto 0 auto;
 
     }
 
@@ -104,38 +116,45 @@ div>button.Config{
         text-align: center;
     }
     #Info{
+        width: 100%;
+        text-align: center;
         padding-left: 0;
         font-size: 16px;
         line-height: 20px;
     }
     div>button.Config{
         padding: 0;
-        width: 50%;
-        height: 40px;
+        width: 100%;
+        height: 30px;
     }
     #config{
         padding-left: 5px;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 30px;
         padding-bottom: 5px;
         padding-top: 5px;
         box-sizing: border-box;
     }
     #About{
-        display: flex;
+        display:none;
+        color:  white;
+        background-color: #0298ac00;
+    }
+    .container2{
+        width: 100%;
+        margin: 0 auto 0 auto;    
+    }
+    .espacamento{
+        padding-left: 20px;
     }
     #About2{
-        display: none;
         background-color: white;
-        color:  #0299ac;
+        color:  #000;
     }
 
 }
 
 @media (min-width: 1140px){
-    header.row2 {
-        margin: 0 20% ;
-    }
     .Main{
         width: 70vw;
         margin: 10% auto;
@@ -187,10 +206,14 @@ div>button.Config{
     }
     .container2{
         width: 100%;
+        
     }
     #MeusCursos{
         margin-top: 30px;
         background-color: white;
         box-sizing: border-box;
+    }
+    .espacamento{
+        padding-left: 30px;
     }
 }
