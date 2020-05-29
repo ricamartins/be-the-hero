@@ -78,32 +78,12 @@ div>button.Config{
     height: 30px;
     padding-bottom: 5px;
 }
-/*-----Minhas Coisas-----*/
-.MinhasCoisas{
-    padding-top: 3vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
+#color{
+    color:  #0299ac;
+    margin: 20px auto 0 auto ;
+    font-size: 28px;
 }
-#espacamento{
-    padding-left: 2vw;
-    font-size: 12pt;
-}
-div.card.text-center{
-    margin-bottom: 10px;
-}
-.card{
-    border-radius: 30px;
-    width: 100%;
-}
-.card-header:first-child{
-    border-radius: 30px 30px 0 0px;;
-}
-.projeto{
-    padding: 30px;
-}
-#final{
-    padding-bottom: 2vh;
-}
+
 
 @media (min-width: 700px) and (max-width: 1139px){
     .Main{
@@ -141,15 +121,15 @@ div.card.text-center{
         padding-top: 5px;
         box-sizing: border-box;
     }
-    .MinhasCoisas{
-        display: inline-grid;
-        padding: 0 3vh 3vh 3vh;
+    #About{
+        display: flex;
+    }
+    #About2{
+        display: none;
+        background-color: white;
+        color:  #0299ac;
     }
 
-    .projeto{
-        padding: 20px;
-        box-sizing: border-box;
-    }
 }
 
 @media (min-width: 1140px){
@@ -170,6 +150,9 @@ div.card.text-center{
     }
     #About{
         display: flex;
+        background-color: #ffffff00;
+        color: white;
+        margin-bottom: 40px;
     }
     #About2{
         display: none;
@@ -177,10 +160,6 @@ div.card.text-center{
         color:  #0299ac;
     }
 
-    .MinhasCoisas{
-        padding-left: 6vw;
-        padding-right: 6vw;
-    }
 
     #Nome{
         padding-top: 0;
@@ -206,10 +185,12 @@ div.card.text-center{
         height: 50px;
         padding-bottom: 5px;
     }
-    #espacamento{
-        font-size: 16pt;
-    }
     .container2{
         width: 100%;
+    }
+    #MeusCursos{
+        margin-top: 30px;
+        background-color: white;
+        box-sizing: border-box;
     }
 }
