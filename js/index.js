@@ -11,3 +11,21 @@ $(document).ready(function(){
       
       
   });
+
+  
+  /* Botão Voltar ao topo com deslize suave */
+
+$(document).ready(function(){
+     $(window).scroll(function(){
+         if ($(this).scrollTop() > 100) {
+             $('#btnTopo').fadeIn();
+         } else {
+             $('#btnTopo').fadeOut();
+         }
+     });
+ 
+     $('#btnTopo').click(function(){
+         $('html, body').animate({scrollTop : 0},'slow');
+         return false;
+     });
+ });
