@@ -45,3 +45,48 @@ $(document).ready(function(){
 
 
 /*Validações formulário de contato */
+
+function selectId(id) {
+    return document.getElementById(id);
+}
+
+function empty(input) {
+    return input.value.trim() === "";
+}
+
+function errorMessage (message) {
+    errorListUl.innerHTML += "<li>" + message + "</li>";
+}
+
+
+let form = selectId('formulario');
+let nome  = selectId('nome');
+let email  = selectId('email');
+let mensagem  = selectId('mensagem');
+
+let errorListUl = document.querySelector('#error-list ul');
+let errorList = selectId('error-list');
+
+form.addEventListener("submit", function (ev){
+
+    errorListUl.innerHTML = '';
+
+    if (empty(nome)){
+        errorMessage("Campo <b>nome</b> não preenchido");
+    }
+
+    if (empty(email)){
+        errorMessage("Campo <b>email</b> não preenchido");
+    }
+
+    if (empty(mensagem)){
+        errorMessage("Campo <b>mensagem</b> não preenchido");
+    }
+
+    if (errorListUl.querySelectorAll('li').length > 0){
+        ev.preventDefault();
+        errorList.hidden = '';
+    }
+
+
+});

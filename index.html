@@ -361,28 +361,62 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-lg-12 col-lg-offset-3 ">
-                          <form >
+
+                          <form action="" id="formulario" method="POST" name="formulario">
    
                           <div class="form-group">
-                            <input type="text" class="form-control" id="nome" autocomplete="off" required>
+                            <input 
+                            type="text" 
+                            class="form-control" 
+                            id="nome" 
+                            name="nome"
+                            autocomplete="off" 
+                            >
                             <label for="nome">Nome</label>
                           </div>
 
                            <div class="form-group">
-                            <input type="email" class="form-control" id="email" autocomplete="off" required>
+                            <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email" 
+                            name="email"
+                            autocomplete="off" 
+                            >
                             <label for="email">Email</label>
                           </div>
                           
                           <div class="form-group">
-                            <textarea class="form-control" name="mensagem" id="mensagem" cols="20" rows="10" autocomplete="off" required></textarea>
+                            <textarea 
+                            class="form-control" 
+                            name="mensagem" 
+                            id="mensagem" 
+                            cols="50" 
+                            rows="10" 
+                            autocomplete="off" 
+                            ></textarea>
                             <label for="">Mensagem</label>
                           </div>
                   
-                          <div class="text-center">
-                            <button type="submit" class="send btn btn-default">Enviar</button>
+
+                          <div id="error-list" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+
+                            <ul>
+
+                            </ul>
+
+                            <button type="button" class="close" data-dismiss="alert" arial-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+
                           </div>
-                          
-                        </form>
+    
+                          <div class="text-center">
+                            <button  name="submit" type="submit" class="send btn btn-default">Enviar</button>
+                          </div>
+
+                          </form>
+
                         </div>
                       </div>
                     </div> 
