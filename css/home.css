@@ -182,6 +182,30 @@ article img {
     height: 155px;
     transition: height 0.5s ease-in-out;
 } */
+
+.modify {
+    width:658px;
+}
+
+.modify .img-holder {
+    margin-left: -69px;
+}
+
+.modify p {
+    margin-left: -61%;
+    padding-top: 27px;
+}
+
+.modify a {
+    font-size: 35px;
+    margin-left: -114px;
+}
+
+.modify h3{
+    margin-left: -73%;
+    font-size: 20px;
+    margin-top: -15px;
+}
 article .content {
     width: 230px;
     height: 150px;
@@ -283,6 +307,29 @@ article button svg:hover {
     
     div#btn-toolbar label.btn {
         margin: 0;
+    }
+
+    .modify{
+        width: 425px;
+        height: 180px;
+        margin-left: 12%;
+    }
+    
+    .modify a {
+        font-size: 35px;
+        margin-left: -75px;
+    }
+
+    .modify p {
+        margin-left: -35%;
+        padding-top: 0px;
+        font-size: 10px;
+    }
+
+    .modify h3 {
+        margin-left: 0%;
+        font-size: 12px;
+        margin-top: 4px;
     }
 
     article {
@@ -458,3 +505,29 @@ article button svg:hover {
         top: 55vh;
     }
 }
+
+@media only screen and (max-width: 574px) {
+	.modify {
+		width: 378px;
+    }
+    
+    .modify p {
+        font-size: 13px;
+        margin-top: 157px;
+    }
+    
+    .modify img {
+        margin-left: 72px;
+        width: 166px;
+    }
+
+    .modify a {
+        font-size: 35px;
+        margin-left: -9px;
+    }
+    .modify h3 {
+        margin-left: 37%;
+        font-size: 20px;
+        margin-top: -292px;
+    }
+  }
