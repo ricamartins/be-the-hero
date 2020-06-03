@@ -291,6 +291,7 @@ h3 {
 
 .form-group textarea {
     resize: none;
+    font-size: 20px;
 }
 
 
@@ -319,6 +320,7 @@ form {
 
 .form-control {
     height: 40px;
+    font-size: 14px;
 }
 .form-control:focus { 
     box-shadow:none;
@@ -347,13 +349,14 @@ label.active{
     padding:0 5px;
 }
 
-.send  {
-    background-color: #007bff;
-    border-color: #007bff;
-}
-.btn {
 
+.send {
+    background-color: #9cc1ff!important;
+}
+
+.btn {
     color: white;
+
     text-transform: uppercase;
     font-weight: bold;
 }
