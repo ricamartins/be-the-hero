@@ -349,12 +349,13 @@ label.active{
     padding:0 5px;
 }
 
-
 .send {
     background-color: #9cc1ff!important;
 }
 
 .btn {
+    background-color: #007bff;
+    border-color: #007bff;
     color: white;
 
     text-transform: uppercase;
@@ -500,19 +501,17 @@ a:hover {
 
 #btnTopo {
     position:fixed;
-	bottom:5px;
+	  bottom:5px;
     right:5px;
-
     display: none;
-
     padding: 6px 5px;
     width: 50px;
     height: 50px;
     border-radius: 50vh;
     text-align: center;
-
     border-color: #dc3545!important;
 }
+
 #btnTopo i.material-icons {
     font-size: 38px;
     line-height: 0.9;
