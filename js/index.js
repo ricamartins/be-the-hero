@@ -29,3 +29,16 @@ $(document).ready(function(){
          return false;
      });
  });
+
+
+ /*scrol suave para links internos 
+ quando clicar num elemento a dentro de nav farei a seguinte função*/
+
+ $('nav a').click(function(e){
+    e.preventDefault();
+    var itemClicado = $(this).attr('href');
+        targetOffset = $(itemClicado).offset().top; 
+    $('html,body').animate({
+        scrollTop: targetOffset
+    },500);
+ });
