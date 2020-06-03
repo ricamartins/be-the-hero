@@ -522,7 +522,7 @@ a:hover {
     }
 
     .emotion {
-        margin-left: 220px;
+        margin: auto;
     }
 
     .emotion svg {
@@ -537,7 +537,7 @@ a:hover {
 
     
     .primeiro-botao {
-        margin: 100px;
+        margin: 80px;
         margin-bottom: 30px;
     }
 
@@ -546,16 +546,23 @@ a:hover {
         padding: 1.5rem 2rem;
     }
 
+    .blog-post-info {
+        text-align: center;
+    }
+
     .blog-post-title {
         margin: 1.5rem 0 2rem;
+        text-align: center;
     }
 
     .blog-post-text {
-        width: 75%;
+        width: 100%;
         text-align: center;
     }
     
-
+    .google-map {
+        margin-left: 15px;
+    }
 }
 
 @media only screen and (max-width: 1125px)  {
