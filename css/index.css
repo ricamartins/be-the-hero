@@ -1,12 +1,14 @@
 * {
-    margin: 0;
+    margin: 0;;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-right: 0px!important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    width: 100vw;
 }
 
 /* menu */
@@ -72,7 +74,7 @@ li a:hover {
     border-color:#FF5353!important;
     text-transform: uppercase;
     font-weight: bold;
-    opacity:.90;
+    opacity:.80;
 }
 
 .btn-primary:hover {
@@ -121,6 +123,7 @@ li a:hover {
     margin-left: 0;
 }
 
+/*
 .primeiro-botao {
     margin-top: 20px;
 }
@@ -132,7 +135,7 @@ li a:hover {
 .primeiro-botao a:hover{
     text-decoration: none;
     color: white;
-}
+}*/
 
 .boas-vindas {
     font-size: 20px;
@@ -233,7 +236,7 @@ li a:hover {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     border-radius: .8rem;
     text-decoration: none;
-    margin-left: 320px;
+    margin-left: 340px;
 }
 
 .blog-post-cta:hover {
@@ -311,7 +314,7 @@ form {
 }
 
 .form-group {
-position:relative;
+    position:relative;
 }
 
 .form-control {
@@ -344,10 +347,13 @@ label.active{
     padding:0 5px;
 }
 
-.botao-contato {
-    background-color: #007bff!important;
-    border-color: #007bff!important;
-    color: white!important;
+.send  {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn {
+
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -420,9 +426,6 @@ svg {
     border: 0;
 }
 
-p {
-    margin-bottom: inherit;
-}
 
 /* footer */
 
@@ -499,22 +502,33 @@ a:hover {
 
     display: none;
 
-    padding: 10px;
+    padding: 6px 5px;
     width: 50px;
     height: 50px;
     border-radius: 50vh;
+    text-align: center;
+
+    border-color: #dc3545!important;
+}
+#btnTopo i.material-icons {
+    font-size: 38px;
+    line-height: 0.9;
 }
 
 /* responsividade */
 
 
 @media only screen and (max-width: 700px) {
+    .redes {
+        width: 320px;
+    }
+
     svg {
-        margin-left: 100px;
+        margin-left: 20px;
     }
 
     .emotion {
-        margin-left: 220px;
+        margin: auto;
     }
 
     .emotion svg {
@@ -527,21 +541,34 @@ a:hover {
         margin-left: 10px;
     }
 
-    
+    /*
     .primeiro-botao {
-        margin-left: 210px;
+        margin: 80px;
         margin-bottom: 30px;
-    }
+    }*/
 
     .blog-post-cta {
-        margin-left: 160px;
+        margin-left: 15px;
+        padding: 1.5rem 2rem;
+    }
+
+    .blog-post-info {
+        text-align: center;
     }
 
     .blog-post-title {
-        margin-left: 160px; 
+        margin: 1.5rem 0 2rem;
+        text-align: center;
+    }
+
+    .blog-post-text {
+        width: 100%;
+        text-align: center;
     }
     
-
+    .google-map {
+        margin-left: 15px;
+    }
 }
 
 @media only screen and (max-width: 1125px)  {

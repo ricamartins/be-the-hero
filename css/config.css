@@ -1,0 +1,213 @@
+.main{
+    left:0;
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+main{
+    background-color: white;
+    height: 100%;
+    border-radius: 5px;
+    border: thin rgb(207, 207, 207) solid;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+main .buttons{
+    width: 30%;
+    height: 100%;
+    border-right: thin rgb(207, 207, 207) solid;
+}
+
+.buttons a{
+    color: black;
+    border-left: 3px white solid;
+}
+
+#current{
+    font-weight: bold;
+}
+
+#current:hover{
+    color: black;
+}
+
+#other:hover{
+    color: black;
+    background-color: rgb(241, 241, 241);
+    border-left: 3px rgb(214, 214, 214) solid;
+}
+
+.buttons .button{
+    font-size: 1.3em;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.buttons #current{
+    border-left: 3px black solid;
+}
+
+.tab-content {
+    width: 100%;
+}
+
+.infos{
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+
+.infos .info{
+    display: flex;
+    width: 100%;
+}
+
+.infos #img{
+    height: 80px;
+}
+
+.infos #bio{
+    height: 100px;
+}
+
+.infos #name, .infos #email, .infos #tel{
+    height: 50px;
+}
+
+.info .name{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+
+#bio .name{
+    padding-top: 20px;
+    align-items: flex-start;
+}
+
+#alterarfoto{
+    font-weight: bold;
+    color: #00597a;
+}
+
+.info .input{
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input, textarea{
+    padding-left: 5px;
+    resize: none;
+    border: thin rgb(207, 207, 207) solid;
+    border-radius: 3px;
+    height: 65%;
+    width: 70%;
+}
+
+.teste {
+    padding: 20px;
+}
+
+b {
+    text-align: justify;
+}
+
+@media (max-width: 800px), (max-height: 800px){
+    .main{
+        top: 90px;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    main{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    main{
+        height: calc(100%-90px);
+    }
+    .buttons{
+        display: none;
+    }
+    main .infos{
+        width: 100%;
+    }
+    .infos .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+    }
+   
+    .infos #bio{
+        height: 200px;
+    }
+    
+    .infos #name, .infos #email, .infos #tel{
+        height: 70px;
+    }
+    
+    .info .name{
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #img .name{
+        padding-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .infos #img{
+        height: 200px;
+    }
+
+    img{
+        width: 130px;
+    }
+     
+    
+    #bio .name{
+        height: 60px;
+        align-items: flex-start;
+    }
+        
+    .info .input{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 20px;
+    }
+    
+    input, textarea{
+        resize: none;
+        border: thin rgb(207, 207, 207) solid;
+        border-radius: 3px;
+        height: 100%;
+        width: 100%;
+    }
+
+}

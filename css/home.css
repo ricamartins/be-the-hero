@@ -58,9 +58,11 @@ nav.categories {
 ul#categories {
     display: none;
     flex-direction: column;
+    justify-content: space-around;
     width: fit-content;
+    height: calc(100vh - 140px);
     position: relative;
-    bottom: 480px;
+    bottom: calc(100vh - 96px);
     z-index: 1;
     padding: 0;
     background-color: #ffde4a;
@@ -115,9 +117,11 @@ div#btn-toolbar {
     background-color: rgb(255, 222, 74);
     display: none;
     flex-direction: column;
+    justify-content: space-around;
     width: fit-content;
+    height: calc(100vh - 140px);
     position: relative;
-    bottom: 400px;
+    bottom: calc(100vh - 96px);
     z-index: 1;
     transition: bottom 1s ease-in-out;
 }
@@ -150,23 +154,57 @@ article {
     flex-wrap: wrap;
     justify-content: space-around;
     flex: none;
-    width: 230px;
+    width: 215px;
     height: 400px;
-    margin: 1em 2em;
-    border-radius: 0.5em;
+    margin: 1em 1.2em;
     cursor: pointer;
-    background-color: hsl(270, 25%, 85%);
+    background-color: hsl(230, 25%, 90%);
     opacity: 0;
     transition: opacity 2s ease;
 }
 article:hover {
     transform: translateY(-5px);
-    box-shadow: 5px 5px hsla(0, 0%, 0%, 5%);
+    transition: transform 0.25s linear;
+    box-shadow: 1px 8px 20px 0px hsl(0, 0%, 50%);
+}
+article .img-holder {
+    overflow: hidden;
+    width: 215px;
+    height: 215px;
+    transition: height 0.5s ease-in-out;
 }
 article img {
-    width: 200px;
-    height: 200px;
-    margin: 0.5em;
+    object-fit: cover;
+    width: 215px;
+    height: 215px;
+}
+/* article:hover .img-holder {
+    height: 155px;
+    transition: height 0.5s ease-in-out;
+} */
+
+.modify {
+    width:658px;
+}
+
+.modify .img-holder {
+    margin-left: -69px;
+}
+
+.modify p {
+    margin-left: -61%;
+    padding-top: 27px;
+}
+
+.modify a {
+    font-size: 35px;
+    margin-left: -114px;
+}
+
+.modify h3{
+    margin-left: -73%;
+    font-size: 20px;
+    margin-top: -15px;
 }
 article .content {
     width: 230px;
@@ -198,6 +236,8 @@ article button {
     padding: 0 !important;
 }
 article button svg {
+    width: 1.4em;
+    height: 1.4em;
     fill: #00597a;
 }
 article button svg:hover {
@@ -230,11 +270,16 @@ article button svg:hover {
     /* BARRA DE CATEGORIAS ABRIR HORIZONTALMENTE */
     ul#categories {
         flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
         height: fit-content;
         bottom: 85px;
     }
     ul#categories li {
         padding: 0 0.35em;
+    }
+    ul#categories li:first-child {
+        padding-left: 0;
     }
 
     /* BARRA DE PESQUISA */
@@ -245,9 +290,10 @@ article button svg:hover {
     /* BARRA DE PESQUISAS ABRIR HORIZONTALMENTE */
     div#btn-toolbar{
         flex-direction: row;
+        width: 100vw;
         height: fit-content;
         bottom: 85px;
-        right: 325px;
+        right: calc(100vw - 55px);
     }
     div#filter-search {
         flex-direction: row;
@@ -263,28 +309,54 @@ article button svg:hover {
         margin: 0;
     }
 
+    .modify{
+        width: 425px;
+        height: 180px;
+        margin-left: 12%;
+    }
+    
+    .modify a {
+        font-size: 35px;
+        margin-left: -75px;
+    }
+
+    .modify p {
+        margin-left: -35%;
+        padding-top: 0px;
+        font-size: 10px;
+    }
+
+    .modify h3 {
+        margin-left: 0%;
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
     article {
         display: flex;
-        width: 450px;
+        width: 425px;
         height: 180px;
+        justify-content: space-between;
+    }
+    article .img-holder {
+        width: 180px;
+        height: 180px
     }
     article img {
-        width: 140px;
-        height: 140px;
-        margin: 1.5em 0.5em;
+        width: 180px;
+        height: 180px;
     }
 }
 
 /* DESKTOP */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1030px) {
     .toolbar {
-        width: 90vw;
-        top: 110px;
-        left: 50px;
-        grid: "categories  search-box searches-toolbar" 50px
-            /  5px        20%       auto;
+        width: 100vw;
+        top: 90px;
+        grid: "categories  search-box searches-toolbar" 65px
+            /  18vw        27vw       55vw;
         align-items: center;
-        border-radius: 0.5em;
+        background-color: #eeeeee;
     }
 
     /* BOTÕES DE CATEGORIA */
@@ -297,13 +369,15 @@ article button svg:hover {
     }
     ul#categories {
         display: flex !important;
-        top: 70px;
-        border-radius: 0.5em;
+        height: calc(100vh - 90px);
+        top: 0;
+        bottom: unset;
     }
     ul#categories li {
         background-color: rgb(255, 222, 74);
         padding: 0.2em 0.5em;
         border-radius: 0.5em;
+        margin: 0;
     }
     ul#categories li:hover label {
         background-color: #00597a;
@@ -328,9 +402,15 @@ article button svg:hover {
     }
     
     /* CAIXA DE PESQUISA */
+    .search-box {
+        background-color: #eeeeee;
+        justify-content: flex-end;
+        border-bottom: #00597a;
+    }
     .search-box input {
         z-index: 3;
-        width: 100%;
+        width: 70%;
+        height: 50%;
     }
     .search-box p#msg-results {
         top: 35vh;
@@ -346,48 +426,78 @@ article button svg:hover {
         position: relative;
         width: 100%;
         vertical-align: bottom;
+        background-color: #eeeeee;
     }
     div#btn-toolbar{
         display: flex !important;
         flex-direction: row;
         position: static;
+        height: auto;
         margin: auto;
+        padding: 0.75em 0;
+        background-color: transparent;
     }
     div#filter-search {
         flex-direction: row;
         margin: 0;
         margin-left: 0;
         margin-right: 4em;
+        background-color: transparent;
     }
     div#sort-search {
         flex-direction: row;
         margin: 0;
         margin-left: 4em;
         margin-right: 0;
+        background-color: transparent;
     }
     div#btn-toolbar label.btn {
         margin: 0;
     }
 
+    div#btn-toolbar label.btn {
+        border: none;
+        border-radius: unset;
+        margin: 0 0.25em;
+    }
+    div#btn-toolbar label:focus {
+        background-color: transparent;
+        border: 2px solid #ffde4a;
+    }
+    div#btn-toolbar label:focus svg {
+        fill: #00597a;
+    }
+    div#btn-toolbar label.active {
+        background-color: transparent;
+        border-bottom: 2px solid #00597a;
+        box-shadow: none;
+    }
+    div#btn-toolbar label.active svg {
+        fill: #00597a;
+    }
+    div#btn-toolbar label input {
+        display: none;
+    }
+    div#btn-toolbar label svg {
+        width: 2em;
+        height: 2em;
+        fill: #00597a;
+        stroke: #00597a;
+        stroke-width: 4px;
+    }
+
     /* SEÇÃO DOS CARDS */
     section {
         grid-area: section;
+        box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
-        width: 80vw;
+        width: 82vw;
         margin-top: 60px;
         margin-bottom: 50px;
         margin-left: 25vw;
-        padding: 2em 1em;
-        justify-content: left;
-    }
-
-    div.block {
-        width: 100vw;
-        height: 20px;
-        position: fixed;
-        z-index: 2;
-        background-color: rgb(238, 238, 238);
+        padding: 2em 0;
+        justify-content: flex-start;
     }
 
     .loader {
@@ -395,3 +505,29 @@ article button svg:hover {
         top: 55vh;
     }
 }
+
+@media only screen and (max-width: 574px) {
+	.modify {
+		width: 378px;
+    }
+    
+    .modify p {
+        font-size: 13px;
+        margin-top: 157px;
+    }
+    
+    .modify img {
+        margin-left: 72px;
+        width: 166px;
+    }
+
+    .modify a {
+        font-size: 35px;
+        margin-left: -9px;
+    }
+    .modify h3 {
+        margin-left: 37%;
+        font-size: 20px;
+        margin-top: -292px;
+    }
+  }
