@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -205,15 +205,15 @@
                  
                   <p class="boas-vindas lead text-center text-md-left text-muted mb-6 mb-lg-8">
                       Seja bem vindo ao <strong class="titulo"> Be the Hero! </strong> Aqui você tem acesso a diversos cursos gratuitos. Além disso,
-                      conectamos você, pessoa amavél, a diversas pessoas que precisam de ajuda. 
+                      conectamos você, pessoa amavél, a pessoas que precisam de ajuda. 
                   </p>
-      
+              <!---
                   <div>
                       <button type="button" class="primeiro-botao btn btn-secondary btn-lg btn-danger btn-primary"><a href="#sobre">
                         Ler mais
                       </a></button>
                   </div>
-      
+                -->
                   </div>
               </div> 
             </div> 
@@ -231,7 +231,7 @@
               <div class="blog-post-info">
                 <h1 class="blog-post-title">Sobre Nós</h1>
                 <p class="blog-post-text">
-                  Nossa iniciativa surgiu a partir de um projeto desenvolvimento no curso 
+                  Nossa iniciativa surgiu a partir de um projeto de desenvolvimento no curso 
                             de Front-end oferecido pela Digital House em parceria com o Facebook. 
                             Nossa equipe é formada por cinco desenvolvedores. Para mais informações sobre a plataforma, cadastre-se!
                 </p>
@@ -254,7 +254,7 @@
       
                   <!-- Heading -->
                   <h3>
-                      Cursos
+                      Curso
                   </h3>
       
                   <!-- Text -->
@@ -361,28 +361,62 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-lg-12 col-lg-offset-3 ">
-                          <form >
+
+                          <form action="" id="formulario" method="POST" name="formulario">
    
                           <div class="form-group">
-                            <input type="text" class="form-control" id="nome" autocomplete="off">
+                            <input 
+                            type="text" 
+                            class="form-control" 
+                            id="nome" 
+                            name="nome"
+                            autocomplete="off" 
+                            >
                             <label for="nome">Nome</label>
                           </div>
 
                            <div class="form-group">
-                            <input type="email" class="form-control" id="email" autocomplete="off">
+                            <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email" 
+                            name="email"
+                            autocomplete="off" 
+                            >
                             <label for="email">Email</label>
                           </div>
                           
                           <div class="form-group">
-                            <textarea class="form-control" name="mensagem" id="mensagem" cols="20" rows="10" autocomplete="off"></textarea>
+                            <textarea 
+                            class="form-control" 
+                            name="mensagem" 
+                            id="mensagem" 
+                            cols="50" 
+                            rows="10" 
+                            autocomplete="off" 
+                            ></textarea>
                             <label for="">Mensagem</label>
                           </div>
                   
-                          <div class="text-center">
-                            <button type="submit" class="btn btn-default disabled">Enviar</button>
+
+                          <div id="error-list" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+
+                            <ul>
+
+                            </ul>
+
+                            <button type="button" class="close" data-dismiss="alert" arial-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+
                           </div>
-                          
-                        </form>
+    
+                          <div class="text-center">
+                            <button  name="submit" type="submit" class="send btn btn-default">Enviar</button>
+                          </div>
+
+                          </form>
+
                         </div>
                       </div>
                     </div> 

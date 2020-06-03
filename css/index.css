@@ -123,6 +123,7 @@ li a:hover {
     margin-left: 0;
 }
 
+/*
 .primeiro-botao {
     margin-top: 20px;
 }
@@ -134,7 +135,7 @@ li a:hover {
 .primeiro-botao a:hover{
     text-decoration: none;
     color: white;
-}
+}*/
 
 .boas-vindas {
     font-size: 20px;
@@ -290,6 +291,7 @@ h3 {
 
 .form-group textarea {
     resize: none;
+    font-size: 20px;
 }
 
 
@@ -318,6 +320,7 @@ form {
 
 .form-control {
     height: 40px;
+    font-size: 14px;
 }
 .form-control:focus { 
     box-shadow:none;
@@ -346,10 +349,15 @@ label.active{
     padding:0 5px;
 }
 
+.send {
+    background-color: #9cc1ff!important;
+}
+
 .btn {
     background-color: #007bff;
     border-color: #007bff;
     color: white;
+
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -493,17 +501,17 @@ a:hover {
 
 #btnTopo {
     position:fixed;
-	bottom:5px;
+	  bottom:5px;
     right:5px;
-
     display: none;
-
     padding: 6px 5px;
     width: 50px;
     height: 50px;
     border-radius: 50vh;
     text-align: center;
+    border-color: #dc3545!important;
 }
+
 #btnTopo i.material-icons {
     font-size: 38px;
     line-height: 0.9;
@@ -535,11 +543,11 @@ a:hover {
         margin-left: 10px;
     }
 
-    
+    /*
     .primeiro-botao {
         margin: 80px;
         margin-bottom: 30px;
-    }
+    }*/
 
     .blog-post-cta {
         margin-left: 15px;
