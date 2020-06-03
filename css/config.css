@@ -56,8 +56,13 @@ main .buttons{
     border-left: 3px black solid;
 }
 
-main .infos{
-    width: 70%;
+.tab-content {
+    width: 100%;
+}
+
+.infos{
+    float: right;
+    width: 100%;
     height: 100%;
 }
 
@@ -113,6 +118,14 @@ input, textarea{
     border-radius: 3px;
     height: 65%;
     width: 70%;
+}
+
+.teste {
+    padding: 20px;
+}
+
+b {
+    text-align: justify;
 }
 
 @media (max-width: 800px), (max-height: 800px){
