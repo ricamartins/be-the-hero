@@ -295,6 +295,31 @@ h3 {
 }
 
 
+/*estado/cidade form contato*/
+  
+
+form select {
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+
+}
+
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 24px;
+}
+
+
+
 /* form e mapa */
 
 .form-header {
@@ -356,7 +381,7 @@ label.active{
 
 .btn {
     background-color: #007bff;
-    border-color: #007bff;
+    border-color:none;
     color: white;
 
     text-transform: uppercase;
