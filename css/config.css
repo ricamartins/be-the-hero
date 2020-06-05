@@ -111,7 +111,7 @@ main .buttons{
     align-items: center;
 }
 
-input, textarea{
+input, textarea, select{
     padding-left: 5px;
     resize: none;
     border: thin rgb(207, 207, 207) solid;
@@ -140,6 +140,7 @@ b {
     main{
         width: 100%;
     }
+
 }
 
 @media (max-width: 600px){
@@ -208,6 +209,9 @@ b {
         border-radius: 3px;
         height: 100%;
         width: 100%;
+    }
+    .flex-column {
+        flex-direction: row;
     }
 
 }
