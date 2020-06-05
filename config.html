@@ -170,9 +170,9 @@
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active teste" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Editar perfil</a>
                 <a class="nav-link teste" id="v-pills-altsen-tab" data-toggle="pill" href="#v-pills-altsen" role="tab" aria-controls="v-pills-altsen" aria-selected="false">Alterar senha</a>
-                <a class="nav-link teste" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-privs" aria-selected="false">Privacidade e segurança</a>
-                <a class="nav-link teste" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-not" aria-selected="false">Notificações</a>
-                <a class="nav-link teste" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-loc" aria-selected="false">Localização</a>
+                <a class="nav-link teste" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Privacidade e segurança</a>
+                <a class="nav-link teste" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Notificações</a>
+                <a class="nav-link teste" id="v-pills-settings2-tab" data-toggle="pill" href="#v-pills-settings2" role="tab" aria-controls="v-pills-settings2" aria-selected="false">Localização</a>
               </div>
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active infos" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -247,9 +247,7 @@
                         <div class="input">
                             <input type="text"/>
                         </div>
-                    </div>
-                    
-                    
+                    </div>          
                     <div class="info" id="name">
                         <div class="name"></div>
                         <div class="input">
@@ -257,8 +255,117 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                <div class="tab-pane fade infos" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Quem vê meu perfil</b>
+                        </div>
+                        <div class="input">
+                            <select name="Privacidade">
+                                <option value="1">Só quem eu sigo</option>
+                                <option value="2">Só quem me segue</option>
+                                <option value="3">Todos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Quem me segue</b>
+                        </div>
+                        <div class="input">
+                            <select name="Seguir">
+                                <option value="1">Com email verificado</option>
+                                <option value="2">Ter conta a mais de 2 dias</option>
+                                <option value="3">Todos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Contas bloqueadas:</b>
+                        </div>
+                        <div class="input">
+                            <a href=""><b>Nenhuma</b></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade infos" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings2-tab">
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Localização</b>
+                        </div>
+                        <div class="input">
+                            <select name="noti">
+                                <option value="1">Permitir</option>
+                                <option value="2">Não Permitir</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade infos" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Seguidores</b>
+                        </div>
+                        <div class="input">
+                            <select name="noti">
+                                <option value="1">Reduzidas</option>
+                                <option value="2">Todas</option>
+                                <option value="3">Nenhuma</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Quem sigo</b>
+                        </div>
+                        <div class="input">
+                            <select name="noti">
+                                <option value="1">Todas</option>
+                                <option value="2">Reduzidas</option>
+                                <option value="3">Nenhuma</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Quem sigo</b>
+                        </div>
+                        <div class="input">
+                            <select name="noti">
+                                <option value="1">Todas</option>
+                                <option value="2">Reduzidas</option>
+                                <option value="3">Nenhuma</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade infos" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Seguidores</b>
+                        </div>
+                        <div class="input">
+                            <select name="noti">
+                                <option value="1">Reduzidas</option>
+                                <option value="2">Todas</option>
+                                <option value="3">Nenhuma</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="info" id="name">
+                        <div class="name">
+                            <b>Quem sigo</b>
+                        </div>
+                        <div class="input">
+                            <select name="noti">
+                                <option value="1">Todas</option>
+                                <option value="2">Reduzidas</option>
+                                <option value="3">Nenhuma</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         </div>
