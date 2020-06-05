@@ -1,6 +1,11 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head >
+=======
+<html lang="pt_br">
+<head>
+>>>>>>> 4f7b5eecfcd0a2e9f13c9c7c852de23ec8d910b9
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
@@ -205,15 +210,15 @@
                  
                   <p class="boas-vindas lead text-center text-md-left text-muted mb-6 mb-lg-8">
                       Seja bem vindo ao <strong class="titulo"> Be the Hero! </strong> Aqui você tem acesso a diversos cursos gratuitos. Além disso,
-                      conectamos você, pessoa amavél, a diversas pessoas que precisam de ajuda. 
+                      conectamos você, pessoa amavél, a pessoas que precisam de ajuda. 
                   </p>
-      
+              <!---
                   <div>
                       <button type="button" class="primeiro-botao btn btn-secondary btn-lg btn-danger btn-primary"><a href="#sobre">
                         Ler mais
                       </a></button>
                   </div>
-      
+                -->
                   </div>
               </div> 
             </div> 
@@ -231,7 +236,7 @@
               <div class="blog-post-info">
                 <h1 class="blog-post-title">Sobre Nós</h1>
                 <p class="blog-post-text">
-                  Nossa iniciativa surgiu a partir de um projeto desenvolvimento no curso 
+                  Nossa iniciativa surgiu a partir de um projeto de desenvolvimento no curso 
                             de Front-end oferecido pela Digital House em parceria com o Facebook. 
                             Nossa equipe é formada por cinco desenvolvedores. Para mais informações sobre a plataforma, cadastre-se!
                 </p>
@@ -244,9 +249,14 @@
         <!-- Serviços -->
         <section class="pt-8 py-md-11" id="section-servicos">
             <div class="container-fluid">
+
+              <h1 class="display-3 text-center text-md-left">
+                <span class="text-primary">Serviços</span>. <br>
+              </h1>
+
               <div class="row">
+
                   <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up">
-      
                   <!-- Icon -->
                   <div class="icon text-primary mb-3">
                       <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><path d="M7 3h10a4 4 0 110 8H7a4 4 0 110-8zm0 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA"></path><path d="M7 13h10a4 4 0 110 8H7a4 4 0 110-8zm10 6a2 2 0 100-4 2 2 0 000 4z" fill="#335EEA" opacity=".3"></path></g></svg>
@@ -259,9 +269,11 @@
       
                   <!-- Text -->
                   <p class="text-muted mb-6 mb-md-0">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text of the printing and 
-                      typesetting industry.Lorem Ipsum is simply dummy text.
+                    Já teve vontade de fazer um curso mas por não possuir condições financeis você teve que abdicar de sua vontade? Ou querer
+                    muito fazer um curso gratuito mas não saber onde encontrá-lo? 
+                    Acredite, muitas pessoas encontram-se nessa situação. Pensando nisso, reunimos diversos cursos gratuitos para 
+                    você que deseja estudar algo novo ou aprofundar um assunto conhecido! 
+  
                   </p>
       
                   </div>
@@ -280,9 +292,10 @@
       
                   <!-- Text -->
                   <p class="text-muted mb-6 mb-md-0">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text of the printing and 
-                    typesetting industry.Lorem Ipsum is simply dummy text.
+                   Você sabe o que são ONGs? São todas as organizações, sem fins lucrativos, 
+                   criadas por pessoas que trabalham voluntariamente em defesa de uma causa, 
+                   seja ela, proteção do meio ambiente, defesa dos direitos humanos, erradicação do trabalho infantil.
+                   Tem interesse em ajudar? Otimo! Conectamos você a diversas Organizações não Governamentais (ONGs).
                 </p>
       
                   </div>
@@ -300,15 +313,17 @@
       
                   <!-- Text -->
                   <p class="text-muted mb-6 mb-md-0">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum is simply dummy text.Lorem Ipsum is simply dummy text of the printing and 
-                    typesetting industry.Lorem Ipsum is simply dummy text.
+                    Você sabe o que são pessoas em situação de vulnerabilidade social? 
+                    Vulnerabilidade social é o conceito que caracteriza a condição dos grupos de indivíduos que estão a margem da sociedade, 
+                    ou seja, pessoas ou famílias que estão em processo de exclusão social, principalmente por fatores socioeconômicos.
+                    Tem interesse em ajudar? Otimo! Conectamos você a essas pessoas.
                 </p>
       
                   </div>
               </div> 
             </div> 
         </section>
+
 
         <!-- Contato -->
         <section class="pt-4 pt-md-11" id="section-contato">
@@ -325,7 +340,7 @@
                   <!-- Heading -->
                   <h1 class="display-3 text-center text-md-left">
                       <span class="text-primary">Contato</span>. <br>
-                  
+              
                   </h1>
       
                   <!-- Text -->
@@ -361,28 +376,94 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-lg-12 col-lg-offset-3 ">
-                          <form >
+
+                          <form action="" id="formulario" method="POST" name="formulario">
    
                           <div class="form-group">
-                            <input type="text" class="form-control" id="nome" autocomplete="off">
+                            <input 
+                            type="text" 
+                            class="form-control" 
+                            id="nome" 
+                            name="nome"
+                            autocomplete="off" 
+                            >
                             <label for="nome">Nome</label>
                           </div>
 
                            <div class="form-group">
-                            <input type="email" class="form-control" id="email" autocomplete="off">
+                            <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email" 
+                            name="email"
+                            autocomplete="off" 
+                            >
                             <label for="email">Email</label>
                           </div>
                           
                           <div class="form-group">
-                            <textarea class="form-control" name="mensagem" id="mensagem" cols="20" rows="10" autocomplete="off"></textarea>
+                            <textarea 
+                            class="form-control" 
+                            name="mensagem" 
+                            id="mensagem" 
+                            cols="50" 
+                            rows="10" 
+                            autocomplete="off" 
+                            ></textarea>
                             <label for="">Mensagem</label>
                           </div>
-                  
-                          <div class="text-center">
-                            <button type="submit" class="btn btn-default disabled">Enviar</button>
+
+                          <div class="field-group">
+
+                            <div class="field">
+                              
+                                <select 
+                                name="uf"
+                                id="uf" 
+                                >
+                                    <option value="">Selecione o Estado</option>
+                                </select>
+    
+                                <input type="hidden" name="state">
+    
+    
+                            </div>
+    
+                            <div class="field">
+                                
+                                <select 
+                                name="city" 
+                                disabled
+                                id="city"
+                                >
+                                    <option value="">Selecione a Cidade</option>
+                                </select>
+                            </div>
+    
+                           
                           </div>
-                          
-                        </form>
+
+
+                  
+
+                          <div id="error-list" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+
+                            <ul>
+
+                            </ul>
+
+                            <button type="button" class="close" data-dismiss="alert" arial-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+
+                          </div>
+    
+                          <div class="text-center">
+                            <button  name="submit" type="submit" class="send btn btn-default">Enviar</button>
+                          </div>
+
+                          </form>
+
                         </div>
                       </div>
                     </div> 
@@ -393,7 +474,7 @@
                   <div class="col-lg-7">
 
                     <!--Google map-->
-                    <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                    <div id="map-container-google-11" class="google-map z-depth-1-half map-container-6" style="height: 400px">
                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0479761312095!2d-46.677530585955125!3d-23.602612284662428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50ab7feb4519%3A0x739f0ddb0439cf94!2sDigital%20House%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1589583552007!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
 
@@ -408,8 +489,6 @@
                             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
                           </a>
                         </div>
-
-                        <a class="btn-floating blue accent-1"></a>
                         <p>São Paulo, SP</p>
                       </div>
 
