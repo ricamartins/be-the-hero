@@ -152,3 +152,72 @@ function getCities (event) {
 document
     .querySelector("select[name=uf]")
     .addEventListener("change", getCities)
+
+
+// criar cadatro
+
+let enviar_cad = document.getElementById('cad');
+let lista_email = [];
+let lista_senha = [];
+
+enviar_cad.addEventListener('click', () => {
+
+    let nome_cad = document.getElementById('modalLRInput15').value;
+    let cpf_cad = document.getElementById('modalLRInput16').value;
+    let email_cad = document.getElementById('modalLRInput12').value;
+    let senha_cad = document.getElementById('modalLRInput13').value;
+    let conf_senha = document.getElementById('modalLRInput14').value;
+    
+
+    if (nome_cad !== '' && cpf_cad !== '' && email_cad !== '' && senha_cad !== '' && conf_senha !== '') {
+        if (conf_senha === senha_cad) {
+            localStorage.setItem('emai', email_cad);
+            localStorage.setItem('senha', senha_cad);
+
+            lista_email.push(localStorage.getItem('email'));
+            lista_senha.push(localStorage.getItem('senha'));
+
+            document.getElementById('modalLRInput15').value = '';
+            document.getElementById('modalLRInput16').value = '';
+            document.getElementById('modalLRInput12').value = '';
+            document.getElementById('modalLRInput13').value = '';
+            document.getElementById('modalLRInput14').value = '';
+
+            alert('Cadastrado com sucesso!');
+
+        } else {
+            alert('Senhas não coincidem');
+        }   
+    } else {
+        alert('Campos não podem estar vazies');
+    }
+});
+
+//validar cadastro
+
+let validar_cad = document.getElementById('log');
+
+validar_cad.addEventListener('click', () => {
+
+    let val_email = document.getElementById('modalLRInput10').value;
+    let val_senha = document.getElementById('modalLRInput11').value;
+    
+    if (val_email !== '' && val_senha !== '') {
+        for (let i = 0; i < lista_email.length; i++) {
+            if (val_email === lista_email[i]) {
+                for (let j = 0; j < lista_senha.length; j++) {
+                    if (val_senha == lista_senha[i]) {
+                        window.location.replace("./home.html");
+                    } else {
+                        alert('Senha incorreta');
+                    }
+                }
+            } else {
+                alert('Email incorreto');
+            }
+        }
+        
+    } else {
+        alert('Campo email ou senha não podem estar vazio');
+    }
+});
