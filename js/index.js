@@ -1,3 +1,4 @@
+/*efeito no form*/
 $(document).ready(function(){
 	
     $(".form-group .form-control").blur(function(){
