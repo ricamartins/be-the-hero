@@ -171,7 +171,7 @@ enviar_cad.addEventListener('click', () => {
 
     if (nome_cad !== '' && cpf_cad !== '' && email_cad !== '' && senha_cad !== '' && conf_senha !== '') {
         if (conf_senha === senha_cad) {
-            localStorage.setItem('emai', email_cad);
+            localStorage.setItem('email', email_cad);
             localStorage.setItem('senha', senha_cad);
 
             lista_email.push(localStorage.getItem('email'));
